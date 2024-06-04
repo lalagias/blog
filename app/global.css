@@ -5,6 +5,22 @@
   color: #fefefe;
 }
 
+/* @theme {
+  --color-*: initial;
+  --color-persian-blue-50: #ecf3ff;
+  --color-persian-blue-100: #dceaff;
+  --color-persian-blue-200: #bfd5ff;
+  --color-persian-blue-300: #98b9ff;
+  --color-persian-blue-400: #7090ff;
+  --color-persian-blue-500: #4e69ff;
+  --color-persian-blue-600: #2f3dfc;
+  --color-persian-blue-700: #232ddf;
+  --color-persian-blue-800: #222dc3;
+  --color-persian-blue-900: #222c8d;
+  --color-persian-blue-950: #141852;
+} */
+
+
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
