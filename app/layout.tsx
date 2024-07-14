@@ -11,18 +11,18 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
-  },
-  description: 'This is my portfolio.',
-  openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    default: 'Dimitris Kountanis',
+    template: '%s | Dimitris Kountanis',
+},
+description: 'Founding Engineer at Native Teams, Front-End Developer, and Fintech Enthusiast.',
+openGraph: {
+    title: 'Dimitris Kountanis | Head of Front-End at Native Teams',
+    description: 'Explore the portfolio of Dimitris Kountanis, a founding engineer at Native Teams, front-end developer, and fintech enthusiast. Discover insights on engineering management, software development, and industry trends.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Dimitris Kountanis Portfolio',
     locale: 'en_US',
     type: 'website',
-  },
+},
   robots: {
     index: true,
     follow: true,
@@ -52,7 +52,10 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className="antialiased h-screen max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}

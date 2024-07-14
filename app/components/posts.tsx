@@ -1,26 +1,13 @@
 import Link from "next/link";
-import { formatDate, getBlogPosts } from "app/blog/utils";
+import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
+import { ReportView } from "app/blog/view-counter";
+import redis from "app/lib/redis";
 
 export function BlogPosts() {
   let allBlogs = getBlogPosts();
 
   return (
-    <div>
-      <div className="flex flex-col space-y-1 mb-4">
-        <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 border-b border-neutral-400">
-          <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
-            Date
-          </p>
-
-          <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
-            Title
-          </p>
-
-          <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
-            Views
-          </p>
-        </div>
-      </div>
+    <>
       {allBlogs
         .sort((a, b) => {
           if (
@@ -30,22 +17,33 @@ export function BlogPosts() {
           }
           return 1;
         })
-        .map((post) => (
-          <Link
-            key={post.slug}
-            className="flex flex-col space-y-1 mb-4 border-b border-neutral-400 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-            href={`/blog/${post.slug}`}
-          >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2">
-              <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
-                {formatDate(post.metadata.publishedAt, false)}
-              </p>
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
-                {post.metadata.title}
-              </p>
-            </div>
-          </Link>
-        ))}
-    </div>
+        .map(async (post) => {
+          const views =
+            (await redis.get<number>(
+              ["pageviews", "blogposts", "/" + post.slug].join(":")
+            )) ?? 0;
+
+          return (
+            <Link
+              key={post.slug}
+              className="flex flex-col space-y-1 mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              href={`/blog/${post.slug}`}
+            >
+              <ReportView slug={post.slug || ""} />
+              <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
+                <p className="text-base text-neutral-900 dark:text-neutral-100 tracking-tight">
+                  {post.metadata.title}
+                </p>
+                <p className="flex align-center text-sm leading-6 text-neutral-600 dark:text-neutral-400 ml-auto">
+                  {Intl.NumberFormat("en-US", { notation: "compact" }).format(
+                    views
+                  )}{" "}
+                  {" views"} | {" "}{calculateReadingTime(post.content)} min read
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+    </>
   );
 }
