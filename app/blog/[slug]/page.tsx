@@ -26,9 +26,6 @@ export function generateMetadata({ params }) {
     summary: description,
     image,
   } = post.metadata;
-  // let ogImage = image
-  //   ? image
-  //   : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
     let ogImage = image
     ? `https://dkountanis.xyz${image}`
@@ -42,7 +39,6 @@ export function generateMetadata({ params }) {
       description,
       type: "article",
       publishedTime,
-      // url: `${baseUrl}/blog/${post.slug}`,
       url: `https://dkountanis.xyz/blog/${post.slug}`,
       images: [
         {
@@ -70,10 +66,12 @@ export default async function Blog({ params }) {
     (await redis.get<number>(
       [
         "pageviews",
-        "example",
+        "blogposts",
          "/" + post.slug,
       ].join(":")
     )) ?? 0;
+
+  console.log(views);
 
   return (
     <section className="pb-20">
