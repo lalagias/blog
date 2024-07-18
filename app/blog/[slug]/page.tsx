@@ -31,6 +31,9 @@ export function generateMetadata({ params }) {
     ? `https://dkountanis.xyz${image}`
     : `https://dkountanis.xyz/og?title=${title}`;
 
+    console.log('test ogImage', ogImage);
+
+
   return {
     title,
     description,
@@ -70,8 +73,6 @@ export default async function Blog({ params }) {
          "/" + post.slug,
       ].join(":")
     )) ?? 0;
-
-  console.log(views);
 
   return (
     <section className="pb-20">
