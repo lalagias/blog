@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "app/components/mdx";
 import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
-import { baseUrl } from "app/sitemap";
+// import { baseUrl } from "app/sitemap";
 import { Velustro } from "uvcanvas";
 import { ReportView } from "app/blog/view-counter";
 import redis from "app/lib/redis";
@@ -26,9 +26,13 @@ export function generateMetadata({ params }) {
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+  // let ogImage = image
+  //   ? image
+  //   : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+
+    let ogImage = image
+    ? `https://dkountanis.xyz${image}`
+    : `https://dkountanis.xyz/og?title=${title}`;
 
   return {
     title,
@@ -38,7 +42,8 @@ export function generateMetadata({ params }) {
       description,
       type: "article",
       publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
+      // url: `${baseUrl}/blog/${post.slug}`,
+      url: `https://dkountanis.xyz/blog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -84,9 +89,9 @@ export default async function Blog({ params }) {
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
             image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
+              ? `https://dkountanis.xyz${post.metadata.image}`
+              : `https://dkountanis.xyz/og?title=${post.metadata.title}`,
+            url: `https://dkountanis.xyz/blog/${post.slug}`,
             author: {
               "@type": "Dimitris Kountanis",
               name: "My Portfolio",

@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { BlogPosts } from "app/components/posts";
 import NTLogo from "app/assets/icons/logo-monogram.svg";
+import DimitrisPortrait from "public/dimitris-photo.jpg";
 
 export default function Page() {
   return (
@@ -10,6 +11,14 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         Hey, I'm Dimitris 🏄🏼
       </h1>
+
+      <Image
+        src={DimitrisPortrait}
+        alt="Dimitris"
+        width="300"
+        height="300"
+        className="rounded-md w-48 h-48 object-cover object-top mb-4"
+      />
       <p className="mb-4">
         {`I'm a front-end developer and fintech enthusiast. Head of Frontend at`}{" "}
         <Link
@@ -30,9 +39,11 @@ export default function Page() {
       </p>
 
       <p className="mb-4">
-        I write about engineering management, software engineering, and various
-        topics. Expect insights, tips, and discussions on leading teams, new
-        techniques, and industry trends. Dive in and enjoy the read! 🤿
+        This is all new for me – writing and sharing my thoughts with the world.
+        So, bear with me as I learn to put my thoughts into words. I'll be
+        talking about engineering management, software engineering, fintech and whatever
+        else pops into my mind. Expect insights, tips, and discussions on
+        leading teams, new techniques, and industry trends. Dive in and enjoy the read! 🤿
       </p>
       <div className="my-8">
         <BlogPosts />
