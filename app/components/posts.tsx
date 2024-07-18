@@ -18,9 +18,10 @@ export function BlogPosts() {
           return 1;
         })
         .map(async (post) => {
+         
           const views =
             (await redis.get<number>(
-              ["pageviews", "example", "/" + post.slug].join(":")
+              ["pageviews", "example", post.slug].join(":")
             )) ?? 0;
 
           return (
@@ -29,9 +30,7 @@ export function BlogPosts() {
               className="flex flex-col space-y-1 mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               href={`/blog/${post.slug}`}
             >
-              <ReportView
-                slug={post.slug || ""}
-              />
+              <ReportView slug={post.slug || ""} />
               <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
                 <p className="text-base text-neutral-900 dark:text-neutral-100 tracking-tight">
                   {post.metadata.title}
