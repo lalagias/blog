@@ -1,5 +1,4 @@
 import { BlogPosts } from 'app/components/posts'
-import { getBlogPosts } from 'app/blog/utils';
 
 export const metadata = {
   title: 'Blog',
@@ -7,7 +6,6 @@ export const metadata = {
 }
 
 export default async function Page() {
-  let allBlogPosts = getBlogPosts();
 
   return (
     <section>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
-import { ReportView } from "app/blog/view-counter";
+import { ReportView } from "app/components/viewcount";
 import redis from "app/lib/redis";
 
 export function BlogPosts() {
@@ -20,7 +20,7 @@ export function BlogPosts() {
         .map(async (post) => {
           const views =
             (await redis.get<number>(
-              ["pageviews", "blogposts", "/" + post.slug].join(":")
+              ["pageviews", "example", "/" + post.slug].join(":")
             )) ?? 0;
 
           return (
@@ -29,7 +29,9 @@ export function BlogPosts() {
               className="flex flex-col space-y-1 mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               href={`/blog/${post.slug}`}
             >
-              <ReportView slug={post.slug || ""} />
+              <ReportView
+                slug={post.slug || ""}
+              />
               <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
                 <p className="text-base text-neutral-900 dark:text-neutral-100 tracking-tight">
                   {post.metadata.title}
@@ -38,7 +40,7 @@ export function BlogPosts() {
                   {Intl.NumberFormat("en-US", { notation: "compact" }).format(
                     views
                   )}{" "}
-                  {" views"} | {" "}{calculateReadingTime(post.content)} min read
+                  {" views"} | {calculateReadingTime(post.content)} min read
                 </p>
               </div>
             </Link>

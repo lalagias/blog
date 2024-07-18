@@ -3,7 +3,7 @@ import { CustomMDX } from "app/components/mdx";
 import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
 // import { baseUrl } from "app/sitemap";
 import { Velustro } from "uvcanvas";
-import { ReportView } from "app/blog/view-counter";
+import { ReportView } from "app/components/viewcount";
 import redis from "app/lib/redis";
 
 export async function generateStaticParams() {
@@ -27,12 +27,11 @@ export function generateMetadata({ params }) {
     image,
   } = post.metadata;
 
-    let ogImage = image
+  let ogImage = image
     ? `https://dkountanis.xyz${image}`
     : `https://dkountanis.xyz/og?title=${title}`;
 
-    console.log('test ogImage', ogImage);
-
+  console.log("test ogImage", ogImage);
 
   return {
     title,
@@ -66,13 +65,8 @@ export default async function Blog({ params }) {
   }
 
   const views =
-    (await redis.get<number>(
-      [
-        "pageviews",
-        "blogposts",
-         "/" + post.slug,
-      ].join(":")
-    )) ?? 0;
+    (await redis.get<number>(["pageviews", "example", post.slug].join(":"))) ??
+    0;
 
   return (
     <section className="pb-20">
