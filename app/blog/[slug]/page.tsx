@@ -29,8 +29,6 @@ export function generateMetadata({ params }) {
     ? `https://dkountanis.xyz${image}`
     : `https://dkountanis.xyz/og?title=${title}`;
 
-  console.log("test ogImage", ogImage);
-
   return {
     title,
     description,

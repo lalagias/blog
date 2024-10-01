@@ -1,0 +1,78 @@
+---
+title: "How we boosted PageSpeed to 90+ at Native Teams!"
+publishedAt: "2024-10-01"
+summary: "How we improved the PageSpeed score from 40s to 90+ with some key optimizations, using Next.js and smart script loading."
+---
+
+Hey everyone! 👋
+
+We recently rolled out a **brand-new homepage** for [**Native Teams**](https://nativeteams.com/). It looks great, but we weren’t entirely satisfied with the initial PageSpeed score, especially on mobile. With a high demand for **content marketing** and our pages being heavy on **graphics and images**, the performance wasn’t quite where we wanted it to be. Plus, this was part of a **tech migration to Next.js**, and we knew we could do better with performance optimization.
+
+## From 40s to 90+ 🚀
+
+When I first looked at the PageSpeed scores for our **Native Teams** website, I noticed mobile was stuck around the **40-50 range**. Not great, right? So, I got to work optimizing the site, and now we’re seeing **desktop scores at 98** and **mobile scores at 82**! Here’s what I did to get us there:
+
+### **1. Deferring Third-Party Scripts**
+
+We had some heavy third-party scripts like **HubSpot chat** and cookie tracking, which were clogging up our **Total Blocking Time** and making **Time to First Byte (TTFB)** slower. To fix this, I deferred loading these scripts until users actually interacted with the page (like scrolling or clicking).
+
+### **2. Fixing Largest Contentful Paint (LCP)**
+
+Our **Largest Contentful Paint (LCP)** was lagging, especially on mobile, clocking in at over 4 seconds. Not good. So, we:
+
+- **Preloaded key images** (like our hero image) to load faster.
+- Switched to **WebP** images to make them smaller and quicker.
+
+The result? We brought **LCP down to 2.1s on desktop** and **2.8s on mobile**!
+
+### **3. Using a CDN**
+
+We also moved our static assets to a **Content Delivery Network (CDN)**, which meant users all over the world could access our site quicker. This brought **Time to First Byte (TTFB)** down from **1.5s to 1.3s on desktop** and **1.5s on mobile**.
+
+### **4. Lazy Loading Offscreen Images**
+
+To avoid loading all images at once, I added **lazy loading** for images that weren’t immediately visible. This made sure we only loaded what the user needed at any given time, improving both **LCP** and overall performance.
+
+### **5. Leveraged Next.js Dynamic Imports**
+
+One of the tools that made this process a whole lot easier was **Next.js**. Next.js has an awesome feature that allows for **dynamic imports**. This let us defer the loading of third-party scripts like HubSpot chat and our cookie dialog, ensuring they only load **client-side** and **after user interaction**.
+
+Here’s a quick code snippet showing how we used **Next.js dynamic imports**:
+
+```tsx
+import dynamic from "next/dynamic";
+
+// Dynamically load the HubSpot chat component
+const ComponentChat = dynamic(
+  () => import("@components/shared-sections/front-chat"),
+  { ssr: false } // Disable server-side rendering
+);
+
+// Dynamically load the cookie dialog component
+const ComponentDialogCookies = dynamic(
+  () => import("@components/dialogs/dialog-cookies"),
+  { ssr: false }
+);
+```
+---
+
+---
+
+## Why This Matters for Native Teams
+
+These improvements weren't just for show—they’ve had real business impact. Here’s why it matters:
+
+* SEO:
+Faster websites rank higher on Google, and improving our Core Web Vitals like LCP and CLS helped boost our search rankings.
+
+* User Experience:
+A faster, more responsive site keeps users engaged for longer and leads to higher retention rates.
+
+* Higher Conversions:
+By improving our performance scores, we’re making sure our users stay happy, and happy users are more likely to convert. 💸
+
+Thanks for reading! I hope you found this helpful, and if you’ve got any tips or want to chat about web performance, feel free to reach out.
+
+Until next time! ✌️
+
+P.S: HubSpot is a tech debt we’re working on paying off. It’s a great tool, but it’s heavy and can slow down your site if not optimized properly.

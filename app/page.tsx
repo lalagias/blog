@@ -40,10 +40,8 @@ export default function Page() {
 
       <p className="mb-4">
         This is all new for me – writing and sharing my thoughts with the world.
-        So, bear with me as I learn to put my thoughts into words. I'll be
-        talking about engineering management, software engineering, fintech and whatever
-        else pops into my mind. Expect insights, tips, and discussions on
-        leading teams, new techniques, and industry trends. Dive in and enjoy the read! 🤿
+        I'll be sharing my mind about engineering management, software, fintech and whatever
+        else pops. Dive in and enjoy the read!
       </p>
       <div className="my-8">
         <BlogPosts />
