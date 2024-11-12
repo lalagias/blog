@@ -1,0 +1,111 @@
+---
+title: "How Storybook supercharged our migration to Next.js"
+publishedAt: "2024-11-12"
+summary: "Discover how implementing **Storybook** helped Native Teams streamline its tech stack migration from **Laravel and Vue v2** to **Next.js**, improve QA processes, and maintain high-quality UI components. As Head of Front End, I led this shift to modernize our stack, improve collaboration, and boost efficiency."
+---
+
+import Image from "next/image";
+
+Hey everyone! 👋
+
+At Native Teams, we’re always looking for ways to improve our development processes and deliver a better user experience. As being around for a while, I saw the need to evolve from our existing Laravel and Vue-based architecture to **Next.js**—a decision aimed at making our frontend more scalable, maintainable, and modern. Alongside this migration, implementing **Storybook** became a key step in streamlining how we worked with components, collaborated with design, and maintained consistency throughout the process.
+
+This post is a look into why I made this decision, how Storybook helped us achieve our goals, and the impact it’s had on our workflow and product quality.
+
+---
+
+## Why Storybook?
+
+When we decided to migrate from Laravel and Vue to Next.js, the shift wasn’t just about adopting a new framework—it was about rethinking how we approach frontend development altogether. One of the challenges I wanted to address was ensuring our components were easy to manage, test, and reuse across projects. That’s where Storybook came in.
+
+Here’s how it made a difference:
+
+### 1. **Component-Driven Development**
+
+Storybook allowed us to develop UI components in isolation, making building and testing faster and more reliable. This was critical for the migration because it meant we could work on components independently, even before the app was fully set up.
+
+- **Example**: While migrating our dashboard components, we could develop and test them in Storybook, ensuring each one was perfect before integration.
+
+<br />
+<Image
+  src="/images/amount-input.png"
+  alt="Storybook Component"
+  width={800}
+  height={400}
+/>
+
+### 2. **Improved Collaboration with Design**
+
+With Storybook, we established a visual library of components that the design and development teams could review together. This eliminated confusion, reduced back-and-forths, and ensured that the final implementation matched the design team’s vision.
+
+> _“Storybook became a single source of truth for our components, making collaboration between design and development effortless.”_
+
+<Image
+  src="/images/combobox-dark-mode.png"
+  alt="Component Library"
+  width={800}
+  height={400}
+/>
+<br />
+---
+
+## How It Streamlined Our QA Process
+
+One of the unexpected benefits of Storybook was its impact on our QA workflow. Testing visual components can be time-consuming, but with Storybook, we were able to catch issues early, reducing the time spent on integration testing.
+
+### Key Improvements:
+
+- **Reduced QA Time**: By isolating components, our QA team could validate them individually, leading to quicker feedback loops.
+- **Higher Confidence in Releases**: Knowing that each component was thoroughly tested gave us confidence during deployment, even as we transitioned to a new framework.
+  
+<br />
+
+---
+
+## Maintaining a High-Quality Design System
+
+Another major focus for me during this migration was ensuring that our **design system** remained robust and consistent. With Storybook, we had a tool to document and maintain our components in real time.
+
+### Highlights:
+
+1. **Consistent Implementation**: Every component followed the same design principles, ensuring a cohesive user experience across the app.
+2. **Accessible Documentation**: The built-in documentation features allowed our team, from developers to QA, to understand how each component worked and how to use it effectively.
+
+<br />
+<Image
+  src="/images/form-elements.png"
+  alt="Component Library"
+  width={300}
+  height={200}
+/>
+<br />
+---
+
+## Business Impact of Storybook Integration
+
+The results of this approach weren’t just technical—they had a direct impact on our team’s efficiency and the product’s overall quality.
+
+- **Faster Time to Market**: Isolated component development and streamlined QA meant we could roll out features more quickly.
+- **Better User Experience**: With polished components and fewer bugs, users now enjoy a smoother, more cohesive experience.
+
+> Before implementing Storybook, developing and testing new features often took 3-5 days, as components had to be tested and debugged in the full application context. After integrating Storybook, this timeline was reduced to 1-2 days, thanks to isolated component development and faster feedback loops during QA.
+
+A recent feature that involved building a new feature yet to be released (**✨Native Passport✨**) was completed in 2 days instead of 5, with significantly fewer iterations during QA.
+
+## What’s Next for Our Tech Stack?
+
+This migration to Next.js is just the beginning. Storybook has become a central part of how we develop at Native Teams, and it’s already proven invaluable in helping us maintain high standards as we scale.
+
+In the coming months, we plan to:
+
+- Expand our component library for faster development on future projects.
+- Leverage automation tools to further improve our QA and testing processes.
+
+<br />
+---
+
+Thanks for reading!
+
+I’m excited to share this journey and would love to hear about your experiences with tech stack migrations or using tools like Storybook. Let’s connect and chat—there’s always something new to learn! 🙌
+
+Until next time! ✌️
