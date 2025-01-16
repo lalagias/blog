@@ -4,7 +4,6 @@ export const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://dkountanis.xyz";
 
 export default async function sitemap() {
-
   let blogs = getBlogPosts().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.metadata.publishedAt).toISOString(),

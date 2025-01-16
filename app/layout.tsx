@@ -9,7 +9,7 @@ import Footer from "app/components/footer";
 import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dkountanis.xyz'),
+  metadataBase: new URL("https://dkountanis.xyz"),
   title: {
     default: "Dimitris Kountanis",
     template: "%s | Dimitris Kountanis",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Dimitris Kountanis | Head of Front-End at Native Teams",
     description:
       "Explore the portfolio of Dimitris Kountanis, a founding engineer at Native Teams, front-end developer, and fintech enthusiast. Discover insights on engineering management, software development, and industry trends.",
-    url: 'https://dkountanis.xyz',
+    url: "https://dkountanis.xyz",
     siteName: "Dimitris Kountanis Portfolio",
     locale: "en_US",
     type: "website",
@@ -55,7 +55,7 @@ export default function RootLayout({
       className={cx(
         "text-black bg-white dark:text-white dark:bg-black",
         GeistSans.variable,
-        GeistMono.variable
+        GeistMono.variable,
       )}
     >
       <head>

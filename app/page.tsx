@@ -40,8 +40,8 @@ export default function Page() {
 
       <p className="mb-4">
         This is all new for me – writing and sharing my thoughts with the world.
-        I'll be sharing my mind about engineering management, software, fintech and whatever
-        else pops. Dive in and enjoy the read!
+        I'll be sharing my mind about engineering management, software, fintech
+        and whatever else pops. Dive in and enjoy the read!
       </p>
       <div className="my-8">
         <BlogPosts />

@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
   // Hash the IP and turn it into a hex string
   const buf = await crypto.subtle.digest(
     "SHA-256",
-    new TextEncoder().encode(ip)
+    new TextEncoder().encode(ip),
   );
   const hash = Array.from(new Uint8Array(buf))
     .map((b) => b.toString(16).padStart(2, "0"))

@@ -45,15 +45,16 @@ import dynamic from "next/dynamic";
 // Dynamically load the HubSpot chat component
 const ComponentChat = dynamic(
   () => import("@components/shared-sections/front-chat"),
-  { ssr: false } // Disable server-side rendering
+  { ssr: false }, // Disable server-side rendering
 );
 
 // Dynamically load the cookie dialog component
 const ComponentDialogCookies = dynamic(
   () => import("@components/dialogs/dialog-cookies"),
-  { ssr: false }
+  { ssr: false },
 );
 ```
+
 ---
 
 ---
@@ -62,14 +63,14 @@ const ComponentDialogCookies = dynamic(
 
 These improvements weren't just for show—they’ve had real business impact. Here’s why it matters:
 
-* SEO:
-Faster websites rank higher on Google, and improving our Core Web Vitals like LCP and CLS helped boost our search rankings.
+- SEO:
+  Faster websites rank higher on Google, and improving our Core Web Vitals like LCP and CLS helped boost our search rankings.
 
-* User Experience:
-A faster, more responsive site keeps users engaged for longer and leads to higher retention rates.
+- User Experience:
+  A faster, more responsive site keeps users engaged for longer and leads to higher retention rates.
 
-* Higher Conversions:
-By improving our performance scores, we’re making sure our users stay happy, and happy users are more likely to convert. 💸
+- Higher Conversions:
+  By improving our performance scores, we’re making sure our users stay happy, and happy users are more likely to convert. 💸
 
 Thanks for reading! I hope you found this helpful, and if you’ve got any tips or want to chat about web performance, feel free to reach out.
 

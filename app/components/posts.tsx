@@ -18,10 +18,9 @@ export function BlogPosts() {
           return 1;
         })
         .map(async (post) => {
-         
           const views =
             (await redis.get<number>(
-              ["pageviews", "example", post.slug].join(":")
+              ["pageviews", "example", post.slug].join(":"),
             )) ?? 0;
 
           return (
@@ -37,7 +36,7 @@ export function BlogPosts() {
                 </p>
                 <p className="flex align-center text-sm leading-6 text-neutral-600 dark:text-neutral-400 ml-auto">
                   {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                    views
+                    views,
                   )}{" "}
                   {" views"} | {calculateReadingTime(post.content)} min read
                 </p>

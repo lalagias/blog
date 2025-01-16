@@ -34,5 +34,5 @@ export default function Footer() {
         </li>
       </ul>
     </footer>
-  )
+  );
 }

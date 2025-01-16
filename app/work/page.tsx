@@ -44,12 +44,11 @@ export default function WorkPage() {
           </li>
           <li className="text-base leading-6 text-grey-400 mb-4">
             2023 to present: 2023 kicked off with me getting promoted to Head of
-            Front End, now managing a growing team of 9 FE engineers
-            leading the development of the frontend of our product. Implementing
-            the next steps for the platform, migrating our tech stack away from
-            Vue to React, and refactoring our old codebases. From using modern
-            CMS for our landing pages to implementing a design system with
-            Storybook.
+            Front End, now managing a growing team of 9 FE engineers leading the
+            development of the frontend of our product. Implementing the next
+            steps for the platform, migrating our tech stack away from Vue to
+            React, and refactoring our old codebases. From using modern CMS for
+            our landing pages to implementing a design system with Storybook.
           </li>
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
