@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import redis from "app/lib/redis";
+import { ipAddress } from "@vercel/functions";
+import redis from "@/app/lib/redis";
 
 export const runtime = "edge";
 
@@ -11,7 +12,9 @@ export async function POST(req: NextRequest) {
     return new NextResponse("Slug not found", { status: 400 });
   }
 
-  const { ip } = req;
+  const {} = req;
+
+  const ip = ipAddress(req);
 
   // Hash the IP and turn it into a hex string
   const buf = await crypto.subtle.digest(

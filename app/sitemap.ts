@@ -1,4 +1,4 @@
-import { getBlogPosts } from "app/blog/utils";
+import { getBlogPosts } from "@/app/blog/utils";
 
 export const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://dkountanis.xyz";

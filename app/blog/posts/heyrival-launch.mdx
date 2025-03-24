@@ -1,0 +1,119 @@
+---
+title: "I Vibe-Coded HeyRival in a Week: Here's the Full Story"
+publishedAt: "2025-03-24"
+summary: "How I built an AI-powered competitor research tool in a week using Claude, Perplexity, Supabase, and Stripe — powered by vibe coding and smart prompting."
+---
+
+Late nights, no backlog, and a wild idea.
+
+That’s how [HeyRival](https://heyrival.io) came to life. A lightweight AI tool that automates competitor research and turns it into a clean, shareable report. It started as a personal itch while validating SaaS ideas. Some industry espionage drama popped up recently, and I saw tons of posts on LinkedIn and X where people were trying to figure out how to compare companies and extract insights from different data points — like trends, pricing, hiring, funding, and more. That gave me the idea to generate shareable infographics with an AI system.
+
+So I decided to build something. Fast.
+
+This post breaks down:
+
+- Why I built HeyRival
+- What vibe coding means (and why it worked)
+- The tech stack (and how AI changes the dev flow)
+- Lessons learned from Stripe, Supabase, Claude, Perplexity, and more
+
+## 🚀 Why HeyRival?
+
+I needed a tool that:
+
+- Automates competitor research
+- Looks clean enough to drop in slides or Notion docs
+- Doesn't cost €500 per month like enterprise intel tools
+
+HeyRival was my answer. You input a few competitor names, and it returns a structured infographic report. Under the hood, it uses:
+
+- **Perplexity API** to run deep web searches
+- **Claude** to organize, summarize, and structure the insights
+- A custom UI to package it all nicely
+
+## 🎨 What Is Vibe Coding?
+
+"Vibe coding" means building with no roadmap, no tickets, no specs.  
+Just momentum, intuition, and fast iteration.
+
+It's about:
+
+- Feeling your way through product decisions
+- Prompting AI tools to handle the boilerplate
+- Staying in flow instead of overplanning
+
+I didn’t design this in Figma. I didn’t write a spec doc.  
+I opened VS Code after work, wrote a few prompts, and built the thing in about 7 days.
+
+### It’s the best way to move fast in 2025:
+
+- Prompt ChatGPT or Claude to generate the PRD
+- Extract TODOs from that into a task list
+- Ask for DB schema suggestions
+- Build small chunks, then prompt again: “Update the docs to reflect the changes we just made”
+
+It’s less about typing and more about orchestrating the build through high-leverage prompts.
+
+## 💡 What AI Did, and What I Still Had to Touch
+
+Let’s get real.  
+Prompting can get you 80% of the way. But to ship a real product, you need to know your tools.
+
+### ⚡ Stripe
+
+Stripe is powerful but opinionated. Even with AI writing the code, you still need to understand:
+
+- How Stripe Checkout vs. Billing works
+- How to set up webhooks correctly
+- How to handle pricing tiers, trial periods, and plan upgrades or downgrades
+- How to map your Supabase users to Stripe customers reliably
+
+It’s not just about code generation. It’s about understanding the lifecycle and making sure the AI isn’t hallucinating key details. That means reading docs, debugging edge cases, and making micro-decisions AI can't.
+
+### 🛠️ Supabase
+
+Supabase is magical, until it isn’t.
+
+Sometimes the AI gives you a query that should work, but it doesn't. Or it assumes a table exists when it doesn't. Or it gets the Row Level Security wrong.
+
+Knowing how to:
+
+- Create policies manually
+- Seed the database cleanly
+- Inspect logs and errors
+- Manage auth across frontend and backend
+
+...is what makes it actually work.
+
+### 🌟 Claude and MCP (Future Work)
+
+Claude was great for summarizing competitor data and turning raw results into structured chunks. I haven’t yet wired in multi-agent prompting (like using [MCP](https://github.com/epfml/mcp)) to validate or chain AI calls, but that’s on my radar to reduce hallucination and increase report reliability.
+
+## 🔧 Stack Overview
+
+- **Next.js (React 18)**
+- **ShadCN + Tailwind** for UI
+- **Supabase** for auth and data
+- **Stripe** for payments
+- **Perplexity API** for research
+- **Claude** for synthesis
+
+AI gave me the foundation, but I had to tweak auth flows, database edge cases, webhook validation, and UI polish myself.
+
+## 🙌 Who HeyRival Is For
+
+- Indie hackers validating new ideas
+- PMs tracking market shifts
+- Founders doing pre-launch research
+- Marketers doing quick GTM analysis
+
+You drop in some names. HeyRival does the messy digging. You get a beautiful, export-ready snapshot.
+
+## ✨ Final Thoughts
+
+We’re entering a new era of building.  
+If you can prompt well and you know your tools deeply, you can ship products in days that would've taken teams weeks.
+
+Vibe coding isn’t just about speed. It’s about trust — in your intuition, in your tools, and in your ability to debug the gaps AI can't fill (yet).
+
+[Check it out](https://heyrival.io), and if you’re building with vibes too, shoot me a message. Always down to jam.

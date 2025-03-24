@@ -1,8 +1,12 @@
 import { notFound } from "next/navigation";
-import { CustomMDX } from "app/components/mdx";
-import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
-import { ReportView } from "app/components/viewcount";
-import redis from "app/lib/redis";
+import { CustomMDX } from "@/app/components/mdx";
+import {
+  formatDate,
+  getBlogPosts,
+  calculateReadingTime,
+} from "@/app/blog/utils";
+import { ReportView } from "@/app/components/viewcount";
+import redis from "@/app/lib/redis";
 
 export async function generateStaticParams() {
   let posts = getBlogPosts();
@@ -12,7 +16,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -53,7 +60,10 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default async function Blog({ params }) {
+export default async function Blog(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -104,7 +114,7 @@ export default async function Blog({ params }) {
       </div>
 
       <article className="prose">
-        <CustomMDX source={post.content} />
+        <CustomMDX source={post.content} components={{}} />
       </article>
     </section>
   );

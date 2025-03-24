@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { formatDate, getBlogPosts, calculateReadingTime } from "app/blog/utils";
-import { ReportView } from "app/components/viewcount";
-import redis from "app/lib/redis";
+import { getBlogPosts, calculateReadingTime } from "@/app/blog/utils";
+import { ReportView } from "@/app/components/viewcount";
+import redis from "@/app/lib/redis";
 
 export function BlogPosts() {
   let allBlogs = getBlogPosts();

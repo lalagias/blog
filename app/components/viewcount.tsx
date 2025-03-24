@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { NextRequest, NextResponse } from "next/server";
 
 interface ViewCountProps {
   slug: string;
