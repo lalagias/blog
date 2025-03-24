@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { BlogPosts } from "app/components/posts";
-import NTLogo from "app/assets/icons/logo-monogram.svg";
-import DimitrisPortrait from "public/dimitris-photo.jpg";
+import { BlogPosts } from "@/app/components/posts";
+import NTLogo from "@/app/assets/icons/logo-monogram.svg";
+import DimitrisPortrait from "@/public/dimitris-photo.jpg";
 
 export default function Page() {
   return (

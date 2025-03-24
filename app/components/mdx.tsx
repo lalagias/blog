@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
 import React from "react";
 
-function Table({ data }) {
+function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
@@ -26,15 +26,11 @@ function Table({ data }) {
   );
 }
 
-function CustomLink(props) {
+function CustomLink(props: { href: string; children: React.ReactNode }) {
   let href = props.href;
 
   if (href.startsWith("/")) {
-    return (
-      <Link href={href} {...props}>
-        {props.children}
-      </Link>
-    );
+    return <Link {...props}>{props.children}</Link>;
   }
 
   if (href.startsWith("#")) {
@@ -44,16 +40,16 @@ function CustomLink(props) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />;
+function RoundedImage(props: { alt: string; src: string }) {
+  return <Image className="rounded-lg" {...props} />;
 }
 
-function Code({ children, ...props }) {
-  let codeHTML = highlight(children);
+function Code({ children, ...props }: { children: React.ReactNode }) {
+  let codeHTML = highlight(children as string);
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
-function slugify(str) {
+function slugify(str: string) {
   return str
     .toString()
     .toLowerCase()
@@ -64,9 +60,9 @@ function slugify(str) {
     .replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
-    let slug = slugify(children);
+function createHeading(level: number) {
+  const Heading = ({ children }: { children: React.ReactNode }) => {
+    let slug = slugify(children as string);
     return React.createElement(
       `h${level}`,
       { id: slug },
@@ -99,10 +95,14 @@ let components = {
   Table,
 };
 
-export function CustomMDX(props) {
+export function CustomMDX(props: {
+  source: string;
+  components: Record<string, React.ComponentType<any>>;
+}) {
   return (
     <MDXRemote
       {...props}
+      source={props.source}
       components={{ ...components, ...(props.components || {}) }}
     />
   );
