@@ -1,0 +1,86 @@
+---
+title: "How I vibe-coded HeyThatAd.com in a weekend"
+publishedAt: "2025-04-08"
+summary: "Over a weekend, I built **HeyThatAd**, a creative ad generator inspired by winning visual ads online. While I wait for GPT-4o image generation API to open up, the product already works manually — and it's live for $3. Here's how I built it with Cursor, Supabase, and Next.js."
+---
+
+Hey everyone 👋
+
+I spent last weekend in flow mode — and the result is [**HeyThatAd**](https://heythatad.com), a simple but powerful tool to browse winning ad creatives and generate your own versions using AI.
+
+Except… the AI part is waiting for **ChatGPT 4o** to drop its image generation API. So for now? It works manually.  
+And honestly, that's part of the fun.
+
+---
+
+## What is HeyThatAd?
+
+HeyThatAd is a lightweight tool that lets you:
+
+- Explore a curated feed of high-performing ad creatives from across the internet
+- Click "Remix"
+- Upload your product image, tagline, and brand name
+- (Soon) get an AI-generated ad version styled after the original
+
+I call it the **"Dupe Engine" for ads**.
+
+The vision is simple: no more blank canvases. Just find a vibe that works, and remix it with your own brand.
+
+---
+
+## Why I built it
+
+A tweet from [Cody Schneider](https://twitter.com/codyschneiderxx). X community talked about how game-changing GPT-4o's image generation is for ad creative workflows.
+
+I didn't wait. I just built the tool manually, so that when the API opens — I'm already ahead.
+
+> "Manual now. Auto later. Momentum always."
+
+---
+
+## How I built it (tech & stack)
+
+**Editor**: Cursor  
+**Stack**: Next.js (App Router), Supabase, Shadcn/ui, Tailwind  
+**Auth + Storage**: Supabase  
+**AI boilerplate**: Vercel AI SDK (plug-and-play ready once GPT-4o image API launches)
+
+The scrapers were built in Puppeteer and dropped into a Supabase pipeline. UI was shipped fast with shadcn/ui. Everything is wired to flip to AI the moment the image gen SDK is public.
+
+---
+
+## Why it costs $3
+
+People literally asked me to price it. So I did.  
+$3 filters out noise, pays for hosting, and gives me signal.  
+It also buys you early access to something I fully intend to grow once GPT-4o opens the gates.
+
+---
+
+## This is the start
+
+This isn't a finished product. It's an early unlock of a powerful idea.
+
+In the coming weeks:
+
+- Full GPT-4o integration
+- Brand kits and presets
+- Public gallery of user-generated creatives
+- AI remix engine for different industries
+
+---
+
+## Final thoughts
+
+This was one of those "flow state" builds where everything aligned.  
+The tweet. The tools. The timing. And the energy to just ship something.
+
+You can try it here:  
+👉 [https://heythatad.com](https://heythatad.com)
+
+I'm shipping fast, testing demand, and staying ready for when the full stack unlocks.
+
+Thanks for following along — drop your thoughts on X or LinkedIn if you check it out.
+
+Until next time,  
+**- D**
