@@ -1,0 +1,9 @@
+# https://dkountanis.xyz llms.txt
+
+- [Dimitris' Frontend Insights](https://www.dkountanis.xyz/): Dimitris shares insights on frontend development and fintech.
+- [Coding Insights Blog](https://www.dkountanis.xyz/blog): Explore coding insights and web development tips on my blog.
+- [Innovative Fintech Engineering](https://www.dkountanis.xyz/work): Building innovative fintech products and leading engineering teams.
+- [Boosting PageSpeed Success](https://www.dkountanis.xyz/blog/boost-pagespeed): Learn how Native Teams improved PageSpeed scores significantly.
+- [HeyThatAd Launch](https://www.dkountanis.xyz/blog/heythatad-launch): Explore and remix ad creatives with HeyThatAd tool.
+- [Storybook and Next.js](https://www.dkountanis.xyz/blog/storybook-implementation): Storybook enhances Next.js migration, improving development efficiency.
+- [Page Not Found](https://www.dkountanis.xyz/blog/heyrival-launch): Error page indicating the requested URL is unavailable.
