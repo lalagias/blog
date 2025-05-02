@@ -3,8 +3,10 @@ import Link from "next/link";
 
 export default function ConsultingPage() {
   return (
-    <section className="flex flex-col gap-8 max-w-2xl">
-      <h1 className="font-bold text-3xl">💼 Consulting & Technical Advisory</h1>
+    <section className="w-full">
+      <h1 className="font-semibold text-2xl mb-2 tracking-tighter">
+        Consulting & Technical Advisory
+      </h1>
 
       <div className="prose dark:prose-invert">
         <div className="mb-8">

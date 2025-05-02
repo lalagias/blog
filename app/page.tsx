@@ -39,7 +39,7 @@ export default function Page() {
       </p>
 
       <p className="mb-4">
-        This is all new for me – writing and sharing my thoughts with the world.
+        This is all new for me. Writing and sharing my thoughts with the world.
         I'll be sharing my mind about engineering management, software, fintech
         and whatever else pops. Dive in and enjoy the read!
       </p>

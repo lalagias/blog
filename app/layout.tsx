@@ -64,7 +64,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="h-screen max-w-xl w-full mx-4 mt-8 lg:mx-auto flex flex-col items-center text-black dark:text-white bg-background">
+          <div className="h-screen max-w-xl w-full mx-0 sm:mx-4 mt-8 lg:mx-auto flex flex-col items-center text-black dark:text-white bg-background">
             <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 w-full">
               <Navbar />
               {children}
