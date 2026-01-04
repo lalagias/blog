@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export default function ConsultingPage() {
   return (
@@ -15,29 +15,22 @@ export default function ConsultingPage() {
           </p>
           <ul className="mt-2 space-y-2">
             <li>Built and scaled products from 1 to 20k+ users</li>
-            <li>
-              Led technical teams at venture-backed startups from seed to Series
-              B
-            </li>
-            <li>
-              Shipped dozens of successful MVPs and product launches, hundreds
-              of features
-            </li>
+            <li>Led technical teams at venture-backed startups from seed to Series B</li>
+            <li>Shipped dozens of successful MVPs and product launches, hundreds of features</li>
           </ul>
         </div>
 
         <div className="mb-8">
           <p className="text-lg font-medium">
-            Need help shipping faster, scaling smarter, or integrating AI into
-            your product?
+            Need help shipping faster, scaling smarter, or integrating AI into your product?
           </p>
           <p>
-            I work with growing teams and founders to solve high-leverage
-            product and engineering problems fast.
+            I work with growing teams and founders to solve high-leverage product and engineering
+            problems fast.
           </p>
           <p>
-            From building MVPs and AI features to fixing tech debt and scaling
-            infra, I bring speed, clarity, and execution.
+            From building MVPs and AI features to fixing tech debt and scaling infra, I bring speed,
+            clarity, and execution.
           </p>
         </div>
 
@@ -63,17 +56,7 @@ export default function ConsultingPage() {
               <p>
                 Rapidly build and ship high-quality MVPs with modern stacks.
                 <br />
-                <span className="text-sm">
-                  (Web apps, SaaS, internal tools, you name it.)
-                </span>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Tech Strategy & Refactoring</h3>
-              <p>
-                Untangle messy codebases, set up scalable infra, and help your
-                team move faster.
+                <span className="text-sm">(Web apps, SaaS, internal tools, you name it.)</span>
               </p>
             </div>
           </div>
@@ -84,16 +67,9 @@ export default function ConsultingPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Who I Work With</h2>
           <ul className="list-disc pl-6">
-            <li>
-              Early-stage startups who need a hands-on CTO-type to get things
-              moving.
-            </li>
-            <li>
-              Product teams looking to integrate AI or ship features faster.
-            </li>
-            <li>
-              Solo founders who want a tech partner without the long-term hire.
-            </li>
+            <li>Early-stage startups who need a hands-on CTO-type to get things moving.</li>
+            <li>Product teams looking to integrate AI or ship features faster.</li>
+            <li>Solo founders who want a tech partner without the long-term hire.</li>
           </ul>
         </div>
 
@@ -102,12 +78,8 @@ export default function ConsultingPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4">How It Works</h2>
           <ul className="list-disc pl-6">
-            <li>
-              Flexible: One-off consulting, weekly retainers, or full builds.
-            </li>
-            <li>
-              Remote-first, async-friendly. No meetings unless we need them.
-            </li>
+            <li>Flexible: One-off consulting, weekly retainers, or full builds.</li>
+            <li>Remote-first, async-friendly. No meetings unless we need them.</li>
             <li>Direct, no-fluff communication and fast delivery.</li>
           </ul>
         </div>
@@ -142,5 +114,5 @@ export default function ConsultingPage() {
         </div>
       </div>
     </section>
-  );
+  )
 }

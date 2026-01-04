@@ -1,12 +1,9 @@
-import Link from "next/link";
-import { ModeToggle } from "@/app/components/mode-toggle";
+import Link from "next/link"
+import { ModeToggle } from "@/app/components/mode-toggle"
 
 const navItems = {
   "/": {
     name: "home",
-  },
-  "/consulting": {
-    name: "consulting",
   },
   "/work": {
     name: "work",
@@ -17,7 +14,10 @@ const navItems = {
   "/build-in-public": {
     name: "build in public",
   },
-};
+  "/consulting": {
+    name: "consulting",
+  },
+}
 
 export function Navbar() {
   return (
@@ -37,12 +37,12 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              );
+              )
             })}
           </div>
         </nav>
       </div>
       <ModeToggle className="absolute top-0 right-0" />
     </aside>
-  );
+  )
 }

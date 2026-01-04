@@ -1,13 +1,11 @@
-import "@/app/global.css";
-import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Navbar } from "@/app/components/nav";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "@/app/components/footer";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/app/components/theme-provider";
+import "@/app/global.css"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GeistMono } from "geist/font/mono"
+import type { Metadata } from "next"
+import Footer from "@/app/components/footer"
+import { Navbar } from "@/app/components/nav"
+import { ThemeProvider } from "@/app/components/theme-provider"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dkountanis.xyz"),
@@ -15,8 +13,7 @@ export const metadata: Metadata = {
     default: "Dimitris Kountanis",
     template: "%s | Dimitris Kountanis",
   },
-  description:
-    "Founding Engineer at Native Teams, Front-End Developer, and Fintech Enthusiast.",
+  description: "Founding Engineer at Native Teams, Front-End Developer, and Fintech Enthusiast.",
   openGraph: {
     title: "Dimitris Kountanis | Head of Front-End at Native Teams",
     description:
@@ -41,23 +38,15 @@ export const metadata: Metadata = {
     title: "Dimitris Kountanis",
     card: "summary_large_image",
   },
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={cn(GeistSans.variable, GeistMono.variable)}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={GeistMono.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-mono">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -77,5 +66,5 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }

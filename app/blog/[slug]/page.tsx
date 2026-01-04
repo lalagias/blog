@@ -1,40 +1,29 @@
-import { notFound } from "next/navigation";
-import { CustomMDX } from "@/app/components/mdx";
-import {
-  formatDate,
-  getBlogPosts,
-  calculateReadingTime,
-} from "@/app/blog/utils";
-import { ReportView } from "@/app/components/viewcount";
-import redis from "@/app/lib/redis";
+import { notFound } from "next/navigation"
+import { calculateReadingTime, formatDate, getBlogPosts } from "@/app/blog/utils"
+import { CustomMDX } from "@/app/components/mdx"
+import { ReportView } from "@/app/components/viewcount"
+import { safeRedis } from "@/app/lib/redis"
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts();
+  const posts = getBlogPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
-  }));
+  }))
 }
 
-export async function generateMetadata(props: {
-  params: Promise<{ slug: string }>;
-}) {
-  const params = await props.params;
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
+  const post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
-    return;
+    return
   }
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata;
+  const { title, publishedAt: publishedTime, summary: description, image } = post.metadata
 
-  let ogImage = image
+  const ogImage = image
     ? `https://dkountanis.xyz${image}`
-    : `https://dkountanis.xyz/og?title=${title}`;
+    : `https://dkountanis.xyz/og?title=${title}`
 
   return {
     title,
@@ -57,22 +46,18 @@ export async function generateMetadata(props: {
       description,
       images: [ogImage],
     },
-  };
+  }
 }
 
-export default async function Blog(props: {
-  params: Promise<{ slug: string }>;
-}) {
-  const params = await props.params;
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+export default async function Blog(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
+  const post = getBlogPosts().find((post) => post.slug === params.slug)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
-  const views =
-    (await redis.get<number>(["pageviews", "example", post.slug].join(":"))) ??
-    0;
+  const views = (await safeRedis.get<number>(["pageviews", "example", post.slug].join(":"))) ?? 0
 
   return (
     <section className="pb-20">
@@ -99,14 +84,11 @@ export default async function Blog(props: {
         }}
       />
       <ReportView slug={post.slug || ""} />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
+      <h1 className="title font-semibold text-2xl tracking-tighter">{post.metadata.title}</h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           <span>
-            {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}{" "}
-            {" views"} |
+            {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)} {" views"} |
           </span>
           <span> {formatDate(post.metadata.publishedAt)} |</span>
           <span> {calculateReadingTime(post.content)} min read</span>
@@ -117,5 +99,5 @@ export default async function Blog(props: {
         <CustomMDX source={post.content} components={{}} />
       </article>
     </section>
-  );
+  )
 }

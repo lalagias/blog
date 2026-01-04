@@ -1,27 +1,23 @@
-import Link from "next/link";
-import { getBlogPosts, calculateReadingTime } from "@/app/blog/utils";
-import { ReportView } from "@/app/components/viewcount";
-import redis from "@/app/lib/redis";
+import Link from "next/link"
+import { calculateReadingTime, getBlogPosts } from "@/app/blog/utils"
+import { ReportView } from "@/app/components/viewcount"
+import { safeRedis } from "@/app/lib/redis"
 
 export function BlogPosts() {
-  let allBlogs = getBlogPosts();
+  const allBlogs = getBlogPosts()
 
   return (
     <>
       {allBlogs
         .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1;
+          if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
+            return -1
           }
-          return 1;
+          return 1
         })
         .map(async (post) => {
           const views =
-            (await redis.get<number>(
-              ["pageviews", "example", post.slug].join(":"),
-            )) ?? 0;
+            (await safeRedis.get<number>(["pageviews", "example", post.slug].join(":"))) ?? 0
 
           return (
             <Link
@@ -31,19 +27,17 @@ export function BlogPosts() {
             >
               <ReportView slug={post.slug || ""} />
               <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
-                <p className="text-base text-neutral-900 dark:text-neutral-100 tracking-tight">
+                <p className="text-sm text-neutral-900 dark:text-neutral-100 tracking-tight">
                   {post.metadata.title}
                 </p>
-                <p className="flex align-center text-sm leading-6 text-neutral-600 dark:text-neutral-400 ml-auto">
-                  {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                    views,
-                  )}{" "}
-                  {" views"} | {calculateReadingTime(post.content)} min read
+                <p className="flex align-center text-xs leading-6 text-neutral-600 dark:text-neutral-400 ml-auto">
+                  {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)} {" views"} |{" "}
+                  {calculateReadingTime(post.content)} min read
                 </p>
               </div>
             </Link>
-          );
+          )
         })}
     </>
-  );
+  )
 }

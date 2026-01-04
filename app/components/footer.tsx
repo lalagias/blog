@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -7,14 +7,6 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex flex-col items-center gap-4 sm:flex-row">
             <nav className="flex gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-              <Link
-                href="/rss"
-                className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                rss
-              </Link>
               <Link
                 href="https://github.com/lalagias"
                 className="transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
@@ -47,5 +39,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

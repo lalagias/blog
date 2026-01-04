@@ -1,40 +1,111 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { useCallback, useEffect, useRef, useState } from "react"
+import { flushSync } from "react-dom"
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils"
 
-export function ModeToggle({ className }: { className?: string }) {
-  const { setTheme } = useTheme();
+interface ModeToggleProps extends React.ComponentPropsWithoutRef<"button"> {
+  duration?: number
+}
+
+function ContrastIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+      <path d="M12 3l0 18" />
+      <path d="M12 9l4.65 -4.65" />
+      <path d="M12 14.3l7.37 -7.37" />
+      <path d="M12 19.6l8.85 -8.85" />
+    </svg>
+  )
+}
+
+export function ModeToggle({ className, duration = 400, ...props }: ModeToggleProps) {
+  const [isDark, setIsDark] = useState(false)
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    const updateTheme = () => {
+      setIsDark(document.documentElement.classList.contains("dark"))
+    }
+
+    updateTheme()
+
+    const observer = new MutationObserver(updateTheme)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const toggleTheme = useCallback(async () => {
+    if (!buttonRef.current) return
+
+    // Check if View Transitions API is supported
+    if (!document.startViewTransition) {
+      const newTheme = !isDark
+      setIsDark(newTheme)
+      document.documentElement.classList.toggle("dark")
+      localStorage.setItem("theme", newTheme ? "dark" : "light")
+      return
+    }
+
+    await document.startViewTransition(() => {
+      flushSync(() => {
+        const newTheme = !isDark
+        setIsDark(newTheme)
+        document.documentElement.classList.toggle("dark")
+        localStorage.setItem("theme", newTheme ? "dark" : "light")
+      })
+    }).ready
+
+    const { top, left, width, height } = buttonRef.current.getBoundingClientRect()
+    const x = left + width / 2
+    const y = top + height / 2
+    const maxRadius = Math.hypot(
+      Math.max(left, window.innerWidth - left),
+      Math.max(top, window.innerHeight - top),
+    )
+
+    document.documentElement.animate(
+      {
+        clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${maxRadius}px at ${x}px ${y}px)`],
+      },
+      {
+        duration,
+        easing: "ease-in-out",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    )
+  }, [isDark, duration])
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className={className}>
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
+    <button
+      ref={buttonRef}
+      onClick={toggleTheme}
+      className={cn(
+        "p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors",
+        className,
+      )}
+      {...props}
+    >
+      <ContrastIcon className="size-4" />
+      <span className="sr-only">Toggle theme</span>
+    </button>
+  )
 }

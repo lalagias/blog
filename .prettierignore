@@ -1,8 +1,0 @@
-# Ignore artifacts:
-build
-coverage
-
-.prettierignore
-
-.env
-node_modules
