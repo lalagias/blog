@@ -35,8 +35,8 @@ export async function POST(req: NextRequest) {
     ex: 24 * 60 * 60,
   })
 
-  // If not new visitor or Redis unavailable, still return success
-  if (isNew === false) {
+  // If not new visitor (null with NX means key exists) or Redis unavailable
+  if (!isNew) {
     return new NextResponse(null, { status: 202 })
   }
 

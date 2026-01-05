@@ -21,11 +21,13 @@ export const safeRedis = {
   set: async (
     key: string,
     value: unknown,
-    options?: { nx?: boolean; ex?: number },
-  ): Promise<boolean | null> => {
+    options?: { nx: true; ex: number },
+  ): Promise<string | null> => {
     if (!redis) return null
     try {
-      return await redis.set(key, value, options)
+      const result = await redis.set(key, value, options)
+      // With NX option, returns null if key exists, "OK" if set successfully
+      return result as string | null
     } catch {
       return null
     }
