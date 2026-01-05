@@ -1,0 +1,75 @@
+---
+title: "The Bet: Why we’re moving to Trunk-Based Development"
+publishedAt: "2026-01-05"
+summary: "We’re moving away from 2-week release cycles and staging-heavy workflows. This isn’t a process experiment; it’s a deliberate tech bet on empowerment, safety, and delivery speed."
+---
+
+In a multi-app SaaS company, the weight of the "release cycle" eventually starts to work against you.
+
+Historically, we’ve operated on a 2-week sprint model. Features are built, merged into a staging branch, tested in a shared staging environment, and eventually released in a big batch. It feels "safe," but it's a false sense of security.
+
+This year, I’m leading a shift that moves us away from this ceremony. We’re moving to **Trunk-Based Development (TBD)**. 
+
+This isn't just about shipping faster. It's about being empowered to release safely when something is ready.
+
+---
+
+## Why the old model breaks at scale
+
+When you have a Next.js + Turborepo setup with shared UI packages across multiple teams, the "Staging-heavy" model becomes a bottleneck:
+
+1. **Environment Contention**: Everyone is fighting for the same staging environment. One broken feature on staging blocks everyone else's testing.
+2. **Batch Risk**: Large releases have a massive blast radius. If something breaks, finding the culprit in a 2-week batch of commits is a nightmare.
+3. **The "Wait for the Cycle" mindset**: Engineers finish work and then... wait. Momentum dies in the gap between "done" and "live."
+
+## The Bet: Safe Speed over Quality Ceremony
+
+The core of this bet is shifting to a **production-first, small, and frequent deployment** model. Here is what that looks like in practice:
+
+### 1. Preview Environments per PR
+Every Pull Request gets its own ephemeral environment. This is where QA happens. We don't wait for staging. We test the delta, in isolation, before it ever touches the main branch.
+
+### 2. Feature Flags as a First-Class Citizen
+If a feature is merged to the main branch (the trunk), it doesn't mean it's live for everyone. We use feature flags to control the rollout. This decouples the **deployment** of code from the **release** of a feature.
+
+### 3. Changesets & Versioning
+In a monorepo, versioning is hard. We’re doubling down on `changesets` to handle versioning and changelogs automatically. This ensures our shared UI packages and apps stay in sync without manual overhead.
+
+### 4. DORA Metrics as our North Star
+We aren't guessing. We are measuring:
+- **Deployment Frequency**
+- **Lead Time for Changes**
+- **Change Failure Rate**
+- **Mean Time to Recovery (MTTR)**
+
+---
+
+## What we are NOT changing
+
+There’s often a panic when you mention "shipping faster." Let’s be clear:
+
+- **QA is NOT reduced.** In fact, QA becomes more focused. We shift from "test everything every two weeks" to "test this specific change thoroughly in a preview environment."
+- **We aren't ignoring risk.** Staging still exists, but its role changes. It's no longer the default stop for every PR; it's reserved for high-risk, cross-team breaking changes or complex data migrations.
+
+## The Real Risks
+
+I’m pragmatic about this. It’s not a silver bullet. The success of TBD depends on things outside the frontend repo:
+
+- **Backend Readiness**: We need preview APIs, seeded data, and backward-compatible contracts. Without a solid OpenAPI-first approach, the frontend can't move this fast safely.
+- **Product Shift**: Product managers have to move toward more granular PRDs and clearer acceptance criteria. You can't ship small if the requirements are giant monoliths.
+- **Ownership Gaps**: When "the release" is everyone's responsibility, it can end up being no one's. Ownership of a feature must follow it through to production.
+
+---
+
+## What success looks like
+
+In 6–12 months, success won't be defined by how many lines of code we wrote. It will be defined by the **confidence** of the team.
+
+Success is an engineer finishing a bug fix at 2 PM and seeing it live (safely) by 3 PM. Success is a product manager being able to toggle a feature on for a beta group without a developer having to run a deployment script.
+
+We are choosing empowerment over ceremony. We are betting that safety comes from small, frequent changes, not large, rare ones.
+
+It’s time to move the trunk.
+
+**- D**
+

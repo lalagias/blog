@@ -22,7 +22,9 @@ export default async function Page() {
         >
           <p className="text-lg font-semibold">HeyThatAd</p>
           <span className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">heythatad.com</span>
-          <Badge className="ml-auto">On hold</Badge>
+          <Badge variant="warning" className="ml-auto">
+            On hold
+          </Badge>
         </Link>
         <Link
           href="https://whoisat.app"
@@ -30,7 +32,9 @@ export default async function Page() {
         >
           <p className="text-lg font-semibold">WhoIsAt</p>
           <span className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">whoisat.app</span>
-          <Badge className="ml-auto">On going</Badge>
+          <Badge variant="success" className="ml-auto">
+            On going
+          </Badge>
         </Link>
       </div>
     </section>

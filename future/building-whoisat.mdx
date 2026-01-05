@@ -1,0 +1,63 @@
+---
+title: "Building WhoIsAt: Moving from random networking to intentional conversations"
+publishedAt: "2026-01-05"
+summary: "Networking is broken. We attend events blindly, scanning rooms for signal in a sea of noise. WhoIsAt is an experiment in people intelligence — using AI to turn raw attendee lists into structured, relevant insights before you even walk in the door."
+---
+
+Networking is broken.
+
+We’ve all been there: you walk into a conference, a meetup, or an invite-only gathering, and you’re scanning the room blindly. You might have a guest list, but it's usually just a raw PDF or a scrolling Luma page — unstructured, disconnected, and useless for actual prioritization.
+
+I built [**WhoIsAt.app**](https://whoisat.app) because I wanted to see if we could do better.
+
+WhoIsAt isn’t a CRM. It’s not a lead-gen tool. It’s an exploration of **people intelligence for events**. 
+
+The goal is simple: what if you understood exactly who was in the room, why they might be relevant to you, and what conversations you should prioritize — all before you even arrive?
+
+---
+
+## The Core Problem: Signal vs. Noise
+
+Events are full of signal, but we rarely see it. Most networking is driven by luck or awkward randomness. Guest lists exist, but they are "dumb" data. 
+
+WhoIsAt explores a simple shift: **Structured data over chaos.**
+
+By extracting attendee lists from event pages and invitations, we can begin to layer on context that matters:
+- Who are these people?
+- What have they built?
+- Why does their company align with your current interests?
+- How can we cluster them so you aren't just looking at an alphabetical list?
+
+---
+
+## The Tech: Under the Hood
+
+The product is built as an experiment-first tool. No fixed UI assumptions, no heavy dashboards. Just insights.
+
+Technically, it runs on a multi-agent orchestration flow that I've been refining. When a list of names comes in (often scraped from Luma or manually dropped), it triggers a sequential pipeline:
+
+1. **Discovery Agent**: Identifies the primary company and online presence for the individual.
+2. **Profile Agent**: Deep-dives into the company context — industry, size, recent trajectory.
+3. **Person Agent**: Pinpoints the specific role, seniority, and public background (LinkedIn, etc.).
+4. **Scoring Agent**: This is where the magic happens. Based on your specific "persona" or goals, it calculates a fit score and provides a reasoning block.
+
+It’s less about "data enrichment" and more about **intent-driven discovery**.
+
+---
+
+## Builder-Driven, Not Sales-Driven
+
+The tone of WhoIsAt is deliberately anti-hustle. I’m not building this to help people spam more LinkedIn invites. I'm building it for founders, operators, and builders who value their time and want meaningful connections.
+
+We don't need more "networking." We need more **intentional conversations**.
+
+## What’s Next?
+
+WhoIsAt is still in the "experiment" phase. I'm playing with conversational interfaces — imagine asking an AI, "Who here is building in the AI infrastructure space and has raised a Seed round?" and getting a curated, reasoned list in seconds.
+
+The vision is a future where in-person interactions are smarter, calmer, and more intentional. 
+
+Less "pitching," more building.
+
+**- D**
+
