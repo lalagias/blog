@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { calculateReadingTime, getBlogPosts } from "@/app/blog/utils"
-import { ReportView } from "@/app/components/viewcount"
-import { safeRedis } from "@/app/lib/redis"
+import { ReportView } from "@/components/viewcount"
+import { safeRedis } from "@/lib/redis"
 
 export function BlogPosts() {
   const allBlogs = getBlogPosts()
@@ -30,7 +30,7 @@ export function BlogPosts() {
                 <p className="text-xs text-neutral-900 dark:text-neutral-100">
                   {post.metadata.title}
                 </p>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 ml-auto">
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 ml-auto mt-2 md:mt-0">
                   {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)} {" views"} |{" "}
                   {calculateReadingTime(post.content)} min read
                 </p>

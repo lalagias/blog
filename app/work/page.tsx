@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">My Work</h1>
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Work</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p className="text-base leading-6 text-grey-400 mb-4">
           On a mission to build exceptional fintech products and lead innovative engineering teams.

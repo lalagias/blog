@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import NTLogo from "@/app/assets/icons/logo-monogram.svg"
-import { BlogPosts } from "@/app/components/posts"
+import NTLogo from "@/assets/icons/logo-monogram.svg"
+import { BlogPosts } from "@/components/posts"
 import DimitrisPortrait from "@/public/dimitris-photo.jpg"
 
 export default function Page() {

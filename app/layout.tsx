@@ -3,9 +3,9 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GeistMono } from "geist/font/mono"
 import type { Metadata } from "next"
-import Footer from "@/app/components/footer"
-import { Navbar } from "@/app/components/nav"
-import { ThemeProvider } from "@/app/components/theme-provider"
+import Footer from "@/components/footer"
+import { Navbar } from "@/components/nav"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dkountanis.xyz"),
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          <div className="h-screen max-w-xl w-full mx-0 sm:mx-4 mt-8 lg:mx-auto flex flex-col items-center text-black dark:text-white bg-background">
+          <div className="h-screen max-w-xl w-full mt-0 mx-0 sm:mx-4 md:mt-8 lg:mx-auto flex flex-col items-center text-black dark:text-white bg-background">
             <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 w-full">
               <Navbar />
               {children}

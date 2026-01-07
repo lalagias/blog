@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
 import { calculateReadingTime, formatDate, getBlogPosts } from "@/app/blog/utils"
-import { CustomMDX } from "@/app/components/mdx"
-import { ReportView } from "@/app/components/viewcount"
-import { safeRedis } from "@/app/lib/redis"
+import { CustomMDX } from "@/components/mdx"
+import { ReportView } from "@/components/viewcount"
+import { safeRedis } from "@/lib/redis"
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()

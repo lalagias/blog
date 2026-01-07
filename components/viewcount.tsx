@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { useEffect } from "react";
+import { useEffect } from "react"
 
 interface ViewCountProps {
-  slug: string;
+  slug: string
 }
 
 export const ReportView = ({ slug }: ViewCountProps) => {
@@ -14,8 +14,8 @@ export const ReportView = ({ slug }: ViewCountProps) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ slug }),
-    });
-  }, [slug]);
+    })
+  }, [slug])
 
-  return null;
-};
+  return null
+}

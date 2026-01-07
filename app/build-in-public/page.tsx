@@ -9,7 +9,7 @@ export const metadata = {
 export default async function Page() {
   return (
     <section className="w-full">
-      <h1 className="font-semibold text-2xl mb-2 tracking-tighter">Build in Public</h1>
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">Build in Public</h1>
       <p className="text-neutral-600 dark:text-neutral-400 mb-8">
         Following the vibe coding and build in public trends, I will share all my projects here.
         Maybe this is a good way to keep myself accountable and to get feedback from the community.

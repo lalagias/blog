@@ -1,10 +1,9 @@
-import { BlogPosts } from "@/app/components/posts";
+import { BlogPosts } from "@/components/posts"
 
 export const metadata = {
   title: "Blog",
-  description:
-    "Read my thoughts on software, business, product, growth and more.",
-};
+  description: "Read my thoughts on software, business, product, growth and more.",
+}
 
 export default async function Page() {
   return (
@@ -12,5 +11,5 @@ export default async function Page() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
       <BlogPosts />
     </section>
-  );
+  )
 }

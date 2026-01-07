@@ -1,6 +1,6 @@
 import { ipAddress } from "@vercel/functions"
 import { type NextRequest, NextResponse } from "next/server"
-import { safeRedis } from "@/app/lib/redis"
+import { safeRedis } from "@/lib/redis"
 
 export const runtime = "edge"
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 export default function ConsultingPage() {
   return (
     <section className="w-full">
-      <h1 className="font-semibold text-2xl mb-2 tracking-tighter">
+      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">
         Consulting & Technical Advisory
       </h1>
 
