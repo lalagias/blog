@@ -91,12 +91,12 @@ export default function ConsultingPage() {
           <p>
             DM me on{" "}
             <Link
-              href="https://x.com/ntanis_kou"
+              href="https://www.linkedin.com/in/dimitris-kountanis/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
-              Twitter
+              LinkedIn
             </Link>{" "}
           </p>
           <p>You'll get honest feedback, fast execution, and real results.</p>

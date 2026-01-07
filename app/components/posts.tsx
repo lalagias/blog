@@ -22,15 +22,15 @@ export function BlogPosts() {
           return (
             <Link
               key={post.slug}
-              className="flex flex-col space-y-1 mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="flex flex-col space-y-1 mb-4 border rounded-md p-4 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               href={`/blog/${post.slug}`}
             >
               <ReportView slug={post.slug || ""} />
               <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
-                <p className="text-sm text-neutral-900 dark:text-neutral-100 tracking-tight">
+                <p className="text-xs text-neutral-900 dark:text-neutral-100">
                   {post.metadata.title}
                 </p>
-                <p className="flex align-center text-xs leading-6 text-neutral-600 dark:text-neutral-400 ml-auto">
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 ml-auto">
                   {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)} {" views"} |{" "}
                   {calculateReadingTime(post.content)} min read
                 </p>
