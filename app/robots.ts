@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,5 +8,9 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/private/",
     },
     sitemap: "https://dkountanis.xyz/sitemap.xml",
-  };
+    // Custom field for AI crawlers
+    other: {
+      "X-Llms-Txt": "https://dkountanis.xyz/llms.txt",
+    },
+  }
 }

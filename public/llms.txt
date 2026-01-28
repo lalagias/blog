@@ -3,6 +3,10 @@
 - [Dimitris' Frontend Insights](https://www.dkountanis.xyz/): Dimitris shares insights on frontend development and fintech.
 - [Coding Insights Blog](https://www.dkountanis.xyz/blog): Explore coding insights and web development tips on my blog.
 - [Innovative Fintech Engineering](https://www.dkountanis.xyz/work): Building innovative fintech products and leading engineering teams.
+- [Consulting & Technical Advisory](https://www.dkountanis.xyz/consulting): Consulting services for startups - AI integration, MVPs, and scaling engineering teams.
+- [Build in Public](https://www.dkountanis.xyz/build-in-public): Follow along with ongoing side projects and experiments.
 - [Boosting PageSpeed Success](https://www.dkountanis.xyz/blog/boost-pagespeed): Learn how Native Teams improved PageSpeed scores significantly.
 - [HeyThatAd Launch](https://www.dkountanis.xyz/blog/heythatad-launch): Explore and remix ad creatives with HeyThatAd tool.
 - [Storybook and Next.js](https://www.dkountanis.xyz/blog/storybook-implementation): Storybook enhances Next.js migration, improving development efficiency.
+- [WhoIsAt](https://www.dkountanis.xyz/blog/building-whoisat): Turn attendee lists into ranked, reasoned profiles before you arrive at events.
+- [Trunk-Based Development](https://www.dkountanis.xyz/blog/trunk-based-development-bet): Moving away from release cycles to trunk-based development for faster, safer delivery.
