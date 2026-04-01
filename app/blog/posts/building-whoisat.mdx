@@ -1,69 +1,49 @@
 ---
 title: "WhoIsAt"
 publishedAt: "2026-01-13"
-summary: "Most people walk into events blind. Guest lists are dumb data. WhoIsAt turns attendee lists into ranked, reasoned profiles before you arrive."
+summary: "I built a tool to enrich event guest lists with AI agents. It worked. Then I killed it. Here's what actually happened."
 ---
 
-Most people walk into events blind.
+I kept showing up to events and wasting time.
 
-They have a guest list. A PDF. A Luma page.
+You know the drill. You get a guest list. A PDF, a Luma page, maybe a spreadsheet if you're lucky. Names and companies. That's it. No context. No signal. You walk into a room of 200 people and you're basically guessing who to talk to.
 
-None of it tells them who matters.
-
----
-
-[**WhoIsAt**](https://whoisat.app) turns attendee lists into ranked profiles.
-
-Not a CRM. Not lead-gen.
-
-Structured context on who's in the room and why they're relevant to you.
+I got tired of that. So I built [WhoIsAt](https://whoisat.app).
 
 ---
 
-## The Problem
+## What it did
 
-Networking is random by default.
+You'd drop in a list of attendee names. Four AI agents would run in sequence: find the person online, pull their company context, build a profile, then score them against your goals. You'd get back a ranked list. Who to prioritize, who to skip, and a short reasoning for each.
 
-Guest lists exist but carry no signal.
+It worked surprisingly well. The enrichment was solid, the scoring made sense, and I could walk into an event actually knowing who was in the room.
 
-You're left scanning a room hoping to get lucky.
-
-Luck is not a strategy.
+I even started experimenting with conversational queries on top. Things like "who here is building AI infra and raised a Seed?" and it would filter and answer from the enriched data.
 
 ---
 
-## How It Works
+## Why I killed it
 
-A list of names goes in.
+Honestly? The market didn't care enough.
 
-Four agents run in sequence:
+The people who'd benefit most (founders, BDs, investors hitting conference circuits) are used to winging it. The pain is real but it's not acute enough for most people to pay for a tool. And the ones who do care already have assistants or internal processes.
 
-1. **Discovery** — finds company and online presence.
-2. **Profile** — pulls company context: size, industry, trajectory.
-3. **Person** — role, seniority, public background.
-4. **Scoring** — calculates fit based on your goals. Returns a score and reasoning.
+I also realized I was solving a problem that only happens a few times a year for most people. Hard to build recurring revenue around something seasonal.
 
-Output: a ranked list of who to talk to and why.
+The tech was fun to build but the business wasn't there. So I shelved it.
 
 ---
 
-## Why
+## What I took from it
 
-I kept wasting time at events.
+A lot, actually.
 
-Talking to people who were fine but irrelevant.
+This was one of my first real multi-agent builds. Chaining four agents in sequence, handling failures gracefully, making the scoring actually useful. That taught me more about agentic architecture than any tutorial could.
 
-If you're going to show up, know why you're there.
+It also taught me to validate demand before falling in love with a solution. I built WhoIsAt because I had the problem. Turns out having the problem yourself doesn't mean there's a market.
 
----
+The agents, the patterns, the enrichment pipeline. All of that thinking carried forward into what I'm building next. Different problem, better market, same agentic mindset.
 
-## Status
-
-Experimenting with conversational queries.
-
-"Who here is building AI infra and raised a Seed?"
-
-No roadmap.
+No regrets.
 
 **- D**
-

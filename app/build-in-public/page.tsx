@@ -22,8 +22,8 @@ export default async function Page() {
         >
           <p className="text-lg font-semibold">HeyThatAd</p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">heythatad.com</p>
-          <Badge variant="warning" className="ml-auto">
-            On hold
+          <Badge variant="destructive" className="ml-auto">
+            Abandoned
           </Badge>
         </Link>
         <Link
@@ -32,6 +32,16 @@ export default async function Page() {
         >
           <p className="text-lg font-semibold">WhoIsAt</p>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">whoisat.app</p>
+          <Badge variant="destructive" className="ml-auto">
+            Abandoned
+          </Badge>
+        </Link>
+        <Link
+          href="https://avrae.ai"
+          className="flex items-center mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+        >
+          <p className="text-lg font-semibold">Avrae</p>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">avrae.ai</p>
           <Badge variant="success" className="ml-auto">
             On going
           </Badge>

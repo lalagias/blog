@@ -11,13 +11,13 @@ export default function WorkPage() {
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Work</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p className="text-base leading-6 text-grey-400 mb-4">
-          On a mission to build exceptional fintech products and lead innovative engineering teams.
-          Here's a summary of my work so far.
+          On a mission to build exceptional fintech products through AI-native engineering and lead
+          teams into the new era of software development. Here's a summary of my work so far.
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl tracking-tighter">Native Teams</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Front End Engineer, Head of Front End
+          Front End Engineer, Head of Front End, VP of Product Engineering
         </p>
         <p className="text-base leading-6 text-grey-400 mb-4">
           Embracing risk and growth, I relocated to Lisbon as a junior engineer during the height of
@@ -46,10 +46,18 @@ export default function WorkPage() {
             implementing a design system with Storybook.
           </li>
           <li className="text-base leading-6 text-grey-400 mb-4">
-            2025 - present: We left our legacy app behind and moved towards a fully new monorepo
-            with a full frontend team of 15 people. We've been minimizing render times from 10s to
-            0.3s interactivity and beyond. Transitioning to more of a people manager role while
-            enabling the team to become 10x engineers through AI usage and modern tooling.
+            2025: We left our legacy app behind and moved towards a fully new monorepo with a full
+            frontend team of 15 people. We've been minimizing render times from 10s to 0.3s
+            interactivity and beyond. Transitioning to more of a people manager role while enabling
+            the team to become 10x engineers through AI usage and modern tooling.
+          </li>
+          <li className="text-base leading-6 text-grey-400 mb-4">
+            2026 - present: Promoted to VP of Product Engineering. Leading product engineering
+            through AI-native approaches and an agentic engineering mindset, blending product
+            thinking with engineering execution. Helped the team pivot to the new age of software
+            development: vibe-coded solutions shipping at 10x speed, delivering mobile apps at a
+            pace we never thought possible, and driving a full transition to AI-native teams. The
+            overlap between product and engineering is where the magic happens now, and we're all in.
           </li>
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />

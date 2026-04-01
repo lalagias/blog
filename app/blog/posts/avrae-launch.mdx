@@ -1,0 +1,66 @@
+---
+title: "Launching Avrae: AI Visibility Monitoring"
+publishedAt: "2026-04-02"
+summary: "I'm building Avrae, a GEO monitoring tool that tracks how AI search engines see your brand. But more than that, it's my experimentation vehicle for shipping AI agents fast."
+draft: "true"
+---
+
+New project just dropped: [**Avrae**](https://avrae.ai).
+
+Quick version: Avrae monitors how AI search engines see your brand. Think of it as SEO monitoring, but for AI. We track visibility across Gemini, Perplexity, Claude, Grok, and more.
+
+---
+
+## Why this exists
+
+Here's something most marketing teams haven't caught up to yet: people are making buying decisions through AI conversations.
+
+Instead of Googling "best analytics tool" and clicking through ten results, they're asking an AI assistant. And the AI gives them an answer. One answer. Maybe three. If your brand isn't in that answer, you don't exist in that channel.
+
+Traditional SEO tools track Google rankings. Nobody's properly tracking AI rankings. The GEO space is starting to fill up with trackers, but it's still early and most solutions are surface-level.
+
+---
+
+## What Avrae does
+
+Our agents query every major AI platform with prompts relevant to your industry. We analyze the responses: Are you mentioned? Are you cited? How do you rank against competitors? What's the sentiment?
+
+Visibility score, platform-by-platform breakdown, competitor benchmarking, and concrete recommendations on how to improve. Continuous monitoring, real-time alerts when things change, historical trends over time.
+
+That's the core product.
+
+---
+
+## The real reason I'm building this
+
+Okay, full honesty. Avrae is a product I believe in. But it's also my experimentation vehicle.
+
+I want to stay on the bleeding edge of AI agents. Not by reading about them, but by shipping them. Avrae gives me a reason to build and deploy agents that interact with every major AI platform, handle real data, and serve real customers.
+
+Every week there's a new model, a new capability, a new platform gaining traction. I need a product that forces me to integrate all of it fast. Avrae is that product.
+
+And I think a lot of gems are going to pop up along the way. The AI landscape is moving so fast that having a live product plugged into all of it means I'll spot opportunities that people just reading the news won't see. New APIs, new platform behaviors, new ways to extract signal. Avrae is my front-row seat to all of it.
+
+It's the same reason I built WhoIsAt before this. To learn agentic patterns by shipping something real. The difference is Avrae has a market and the timing is right.
+
+---
+
+## The tech side
+
+For anyone curious, this is built with the same stack I use for everything. Next.js, Supabase, Cursor doing most of the heavy lifting. The agents run as edge functions that query AI platforms, parse responses, and score the results.
+
+The interesting part is the agent orchestration. Each platform has different response patterns, different ways of citing sources, different ranking behaviors. The agents need to handle all of that and normalize it into a single visibility score.
+
+It's the kind of problem that's genuinely fun to work on.
+
+---
+
+## What's next
+
+I'll be writing more about what we learn as we scan more brands and see patterns emerge. The data is already interesting. And every new model release or platform update means the agents need to evolve too.
+
+This is going to be a fast-moving project. That's the whole point.
+
+More soon.
+
+**- D**

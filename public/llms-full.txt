@@ -1,316 +1,156 @@
 # https://dkountanis.xyz llms-full.txt
 
-## Dimitris' Frontend Insights
-# Hey, I'm Dimitris 🏄🏼
+## Dimitris Kountanis
+# Hey, I'm Dimitris
 
-![Dimitris](https://www.dkountanis.xyz/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdimitris-photo.b45272a7.jpg&w=640&q=75)
+VP of Product Engineering at [Native Teams](https://nativeteams.com/). Building the future of work and utilizing AI to the maximum of its abilities.
 
-I'm a front-end developer and fintech enthusiast. Head of Frontend at [![Native Teams Logo](https://www.dkountanis.xyz/_next/static/media/logo-monogram.2822b8d9.svg)Native Teams](https://nativeteams.com/), where I help build the future of work. From HR to payroll solutions, we're creating a platform that supports the new way of working.
+This is a curated corner of my mind on product, engineering, and AI. Dive in.
 
-This is all new for me – writing and sharing my thoughts with the world. I'll be sharing my mind about engineering management, software, fintech and whatever else pops. Dive in and enjoy the read!
-
-[How I vibe-coded HeyThatAd.com in a weekend\\
-\\
-41 views \| 3 min read](https://www.dkountanis.xyz/blog/heythatad-launch) [How Storybook supercharged our migration to Next.js\\
-\\
-482 views \| 4 min read](https://www.dkountanis.xyz/blog/storybook-implementation) [How we boosted PageSpeed to 90+ at Native Teams!\\
-\\
-619 views \| 4 min read](https://www.dkountanis.xyz/blog/boost-pagespeed)
-
-## Coding Insights Blog
-# My Blog
-
-[How I vibe-coded HeyThatAd.com in a weekend\\
-\\
-41 views \| 3 min read](https://www.dkountanis.xyz/blog/heythatad-launch) [How Storybook supercharged our migration to Next.js\\
-\\
-482 views \| 4 min read](https://www.dkountanis.xyz/blog/storybook-implementation) [How we boosted PageSpeed to 90+ at Native Teams!\\
-\\
-619 views \| 4 min read](https://www.dkountanis.xyz/blog/boost-pagespeed)
-
-## Innovative Fintech Engineering
+## Work
 # My Work
 
-On a mission to build exceptional fintech products and lead innovative engineering teams. Here's a summary of my work so far.
+On a mission to build exceptional fintech products through AI-native engineering and lead teams into the new era of software development. Here's a summary of my work so far.
 
-* * *
+### Native Teams
 
-## Native Teams
-
-Front End Engineer, Head of Front End
+Front End Engineer, Head of Front End, VP of Product Engineering
 
 Embracing risk and growth, I relocated to Lisbon as a junior engineer during the height of COVID-19. This leap of faith outside my comfort zone rewarded me with remarkable career growth and invaluable experiences.
 
 - 2019 - 1 Year before launching Native Teams: My work spanned across diverse areas, including live streaming platforms, cloud storage solutions, and note-taking apps. During this covid period, I gained extensive experience in building dashboards, landing pages, and crafting user interfaces, which laid the groundwork for identifying an opportunity to launch Native Teams.
 - 2020 - 2022: Took over landing pages and the first dashboards while we were in search of PMF. This was the hardest time as the only focus was navigating the ambiguity of the product and determining the best options to focus on, juggling between marketing and platform development.
-- 2023 to present: 2023 kicked off with me getting promoted to Head of Front End, now managing a growing team of 9 FE engineers leading the development of the frontend of our product. Implementing the next steps for the platform, migrating our tech stack away from Vue to React, and refactoring our old codebases. From using modern CMS for our landing pages to implementing a design system with Storybook.
+- 2023 to 2025: 2023 kicked off with me getting promoted to Head of Front End, managing a growing team of 9 FE engineers leading the development of the frontend of our product. Implementing the next steps for the platform, migrating our tech stack away from Vue to React, and refactoring our old codebases. From using modern CMS for our landing pages to implementing a design system with Storybook.
+- 2025: We left our legacy app behind and moved towards a fully new monorepo with a full frontend team of 15 people. We've been minimizing render times from 10s to 0.3s interactivity and beyond. Transitioning to more of a people manager role while enabling the team to become 10x engineers through AI usage and modern tooling.
+- 2026 - present: Promoted to VP of Product Engineering. Leading product engineering through AI-native approaches and an agentic engineering mindset, blending product thinking with engineering execution. Helped the team pivot to the new age of software development: vibe-coded solutions shipping at 10x speed, delivering mobile apps at a pace we never thought possible, and driving a full transition to AI-native teams. The overlap between product and engineering is where the magic happens now, and we're all in.
 
 * * *
 
-## Boosting PageSpeed Success
-# How we boosted PageSpeed to 90+ at Native Teams!
+## Build in Public
 
-619 views \|October 1, 2024 \|4 min read
+Side projects and experiments:
 
-Hey everyone! 👋
-
-We recently rolled out a **brand-new homepage** for [**Native Teams**](https://nativeteams.com/). It looks great, but we weren’t entirely satisfied with the initial PageSpeed score, especially on mobile. With a high demand for **content marketing** and our pages being heavy on **graphics and images**, the performance wasn’t quite where we wanted it to be. Plus, this was part of a **tech migration to Next.js**, and we knew we could do better with performance optimization.
-
-## From 40s to 90+ 🚀
-
-When I first looked at the PageSpeed scores for our **Native Teams** website, I noticed mobile was stuck around the **40-50 range**. Not great, right? So, I got to work optimizing the site, and now we’re seeing **desktop scores at 98** and **mobile scores at 82**! Here’s what I did to get us there:
-
-### **1\. Deferring Third-Party Scripts**
-
-We had some heavy third-party scripts like **HubSpot chat** and cookie tracking, which were clogging up our **Total Blocking Time** and making **Time to First Byte (TTFB)** slower. To fix this, I deferred loading these scripts until users actually interacted with the page (like scrolling or clicking).
-
-### **2\. Fixing Largest Contentful Paint (LCP)**
-
-Our **Largest Contentful Paint (LCP)** was lagging, especially on mobile, clocking in at over 4 seconds. Not good. So, we:
-
-- **Preloaded key images** (like our hero image) to load faster.
-- Switched to **WebP** images to make them smaller and quicker.
-
-The result? We brought **LCP down to 2.1s on desktop** and **2.8s on mobile**!
-
-### **3\. Using a CDN**
-
-We also moved our static assets to a **Content Delivery Network (CDN)**, which meant users all over the world could access our site quicker. This brought **Time to First Byte (TTFB)** down from **1.5s to 1.3s on desktop** and **1.5s on mobile**.
-
-### **4\. Lazy Loading Offscreen Images**
-
-To avoid loading all images at once, I added **lazy loading** for images that weren’t immediately visible. This made sure we only loaded what the user needed at any given time, improving both **LCP** and overall performance.
-
-### **5\. Leveraged Next.js Dynamic Imports**
-
-One of the tools that made this process a whole lot easier was **Next.js**. Next.js has an awesome feature that allows for **dynamic imports**. This let us defer the loading of third-party scripts like HubSpot chat and our cookie dialog, ensuring they only load **client-side** and **after user interaction**.
-
-Here’s a quick code snippet showing how we used **Next.js dynamic imports**:
-
-```tsx
-import dynamic from "next/dynamic";
-
-// Dynamically load the HubSpot chat component
-const ComponentChat = dynamic(
-  () => import("@components/shared-sections/front-chat"),
-  { ssr: false }, // Disable server-side rendering
-);
-
-// Dynamically load the cookie dialog component
-const ComponentDialogCookies = dynamic(
-  () => import("@components/dialogs/dialog-cookies"),
-  { ssr: false },
-);
-```
+- **Avrae** (avrae.ai) - AI Visibility Monitoring. On going.
+- **HeyThatAd** (heythatad.com) - Creative ad generator. Abandoned.
+- **WhoIsAt** (whoisat.app) - Event guest list enrichment with AI agents. Abandoned.
 
 * * *
 
+## I Haven't Written Code in a Year
+
+April 2, 2026
+
+I haven't written code in about a year.
+
+Not in the traditional sense. I haven't opened a file, stared at a blank function, and typed out logic line by line. That workflow is over for me. And I don't think it's coming back.
+
+What I do now is closer to directing. I describe what I want. I set constraints. I review what comes back. I course-correct. I ship. The models do the writing. I do the thinking.
+
+This isn't a flex. It's just where we are.
+
+### The shift nobody's talking about honestly
+
+Everyone's talking about AI in engineering. Most of the conversation is surface-level. "We're exploring AI tools." "We have a pilot program." That's not what's happening on the ground.
+
+What's actually happening is a fundamental change in what it means to be an engineer.
+
+I lead a product engineering team. A year ago we wrote code. Now we orchestrate agents. We define outcomes, feed context, review outputs, and iterate. The feedback loop went from days to minutes. We're shipping things in hours that used to take sprints.
+
+And the people who are thriving aren't the ones who write the best TypeScript. They're the ones who can think clearly, describe problems precisely, and evaluate outputs fast.
+
+### The tooling is ready. Like, actually ready.
+
+**Cursor** changed the game. It went from "nice autocomplete" to a full agentic IDE. Plan mode lets you describe what you want at a high level and watch it reason through the implementation, plan the steps, and execute across your entire codebase. It's not autocomplete. It's a collaborator that understands your project.
+
+And then there's **Cursor Glass**. Ambient context, always watching, always aware of what you're doing and what you need next. This is where the IDE is heading: not a text editor with AI bolted on, but an AI-native environment where the editor is secondary to the agent.
+
+**Claude Code** is writing production-quality software. Not snippets. Full features. Multi-file refactors. Complex debugging sessions where it reasons through the problem better than most engineers would. Anthropic understood something others didn't: the model needs to live inside your workflow, not sit behind a chat window.
+
+The infrastructure for agentic engineering is here. The question is whether you're using it or watching from the sidelines.
+
+### Early adopter vs laggard: the gap is compounding
+
+The benefits of adopting AI-native workflows compound. And so does the cost of waiting.
+
+Teams that started early have built intuition around prompting, agent orchestration, and AI-assisted review. They've developed workflows that multiply their output. They've learned where the models fail and how to compensate. That knowledge compounds every single week.
+
+Teams that are "waiting to see" are falling behind in ways they can't easily measure. It's not just about speed. It's about the muscle memory of working with AI. You can't download that overnight.
+
+This is a classic early-adopter dynamic, except the stakes are higher. In previous tech shifts you could catch up. You could migrate to the cloud a few years late and be fine. This one moves faster. The 10-person team using agents properly is outshipping the 100-person team that's still debating whether to allow AI tools.
+
+### What I've seen work
+
+At Native Teams I've been pushing the team toward this for over a year. Here's what actually worked:
+
+- **Trust the models more than feels comfortable.** The models are good enough now that the default should be trust, with spot-checks. Not suspicion with occasional acceptance.
+- **Make AI the default, not the exception.** Every new feature starts with an agent. Every bug investigation starts with context fed to a model. Every code review is AI-assisted. It's the environment you work in.
+- **Hire for judgment, not just skill.** The best engineers aren't the fastest coders. They're the ones who can evaluate AI output critically, catch subtle issues, and redirect agents effectively.
+- **Ship vibe-coded solutions when appropriate.** Not everything needs to be artisanal hand-crafted code. Some things just need to work. We've shipped mobile apps, internal tools, and customer-facing features this way.
+
+The shift is here. The only question is whether you're leading it or getting dragged into it later.
+
+**- D**
+
 * * *
 
-## Why This Matters for Native Teams
+## WhoIsAt
 
-These improvements weren't just for show—they’ve had real business impact. Here’s why it matters:
+January 13, 2026
 
-- SEO:
-Faster websites rank higher on Google, and improving our Core Web Vitals like LCP and CLS helped boost our search rankings.
+I built a tool to enrich event guest lists with AI agents. It worked. Then I killed it. Here's what actually happened.
 
-- User Experience:
-A faster, more responsive site keeps users engaged for longer and leads to higher retention rates.
+I kept showing up to events and wasting time. You get a guest list. A PDF, a Luma page, maybe a spreadsheet if you're lucky. Names and companies. No context. No signal. You walk into a room of 200 people and you're basically guessing who to talk to.
 
-- Higher Conversions:
-By improving our performance scores, we’re making sure our users stay happy, and happy users are more likely to convert. 💸
+Four AI agents would run in sequence: find the person online, pull their company context, build a profile, then score them against your goals. You'd get back a ranked list. Who to prioritize, who to skip, and a short reasoning for each.
 
+The market didn't care enough. The people who'd benefit most (founders, BDs, investors hitting conference circuits) are used to winging it. The pain is real but it's not acute enough for most people to pay for a tool.
 
-Thanks for reading! I hope you found this helpful, and if you’ve got any tips or want to chat about web performance, feel free to reach out.
+This was one of my first real multi-agent builds. Chaining four agents in sequence, handling failures gracefully, making the scoring actually useful. That taught me more about agentic architecture than any tutorial could.
 
-Until next time! ✌️
+The agents, the patterns, the enrichment pipeline. All of that thinking carried forward into what I'm building next. Different problem, better market, same agentic mindset.
 
-P.S: HubSpot is a tech debt we’re working on paying off. It’s a great tool, but it’s heavy and can slow down your site if not optimized properly.
+**- D**
+
+* * *
+
+## Trunk-Based Development
+
+Moving away from release cycles to trunk-based development for faster, safer delivery at Native Teams.
+
+* * *
 
 ## HeyThatAd Launch
-# How I vibe-coded HeyThatAd.com in a weekend
 
-40 views \|April 8, 2025 \|3 min read
+April 8, 2025
 
-Hey everyone 👋
+Vibe-coded HeyThatAd.com in a weekend. A simple tool to browse winning ad creatives and generate your own versions using AI. Built with Cursor, Next.js (App Router), Supabase, Shadcn/ui, and Tailwind.
 
-I spent last weekend in flow mode — and the result is [**HeyThatAd**](https://heythatad.com/), a simple but powerful tool to browse winning ad creatives and generate your own versions using AI.
-
-Except… the AI part is waiting for **ChatGPT 4o** to drop its image generation API. So for now? It works manually.
-
-And honestly, that's part of the fun.
+**- D**
 
 * * *
-
-## What is HeyThatAd?
-
-HeyThatAd is a lightweight tool that lets you:
-
-- Explore a curated feed of high-performing ad creatives from across the internet
-- Click "Remix"
-- Upload your product image, tagline, and brand name
-- (Soon) get an AI-generated ad version styled after the original
-
-I call it the **"Dupe Engine" for ads**.
-
-The vision is simple: no more blank canvases. Just find a vibe that works, and remix it with your own brand.
-
-* * *
-
-## Why I built it
-
-A tweet from [Cody Schneider](https://twitter.com/codyschneiderxx). X community talked about how game-changing GPT-4o's image generation is for ad creative workflows.
-
-I didn't wait. I just built the tool manually, so that when the API opens — I'm already ahead.
-
-> "Manual now. Auto later. Momentum always."
-
-* * *
-
-## How I built it (tech & stack)
-
-**Editor**: Cursor
-
-**Stack**: Next.js (App Router), Supabase, Shadcn/ui, Tailwind
-
-**Auth + Storage**: Supabase
-
-**AI boilerplate**: Vercel AI SDK (plug-and-play ready once GPT-4o image API launches)
-
-The scrapers were built in Puppeteer and dropped into a Supabase pipeline. UI was shipped fast with shadcn/ui. Everything is wired to flip to AI the moment the image gen SDK is public.
-
-* * *
-
-## Why it costs $3
-
-People literally asked me to price it. So I did.
-
-$3 filters out noise, pays for hosting, and gives me signal.
-
-It also buys you early access to something I fully intend to grow once GPT-4o opens the gates.
-
-* * *
-
-## This is the start
-
-This isn't a finished product. It's an early unlock of a powerful idea.
-
-In the coming weeks:
-
-- Full GPT-4o integration
-- Brand kits and presets
-- Public gallery of user-generated creatives
-- AI remix engine for different industries
-
-* * *
-
-## Final thoughts
-
-This was one of those "flow state" builds where everything aligned.
-
-The tweet. The tools. The timing. And the energy to just ship something.
-
-You can try it here:
-
-👉 [https://heythatad.com](https://heythatad.com/)
-
-I'm shipping fast, testing demand, and staying ready for when the full stack unlocks.
-
-Thanks for following along — drop your thoughts on X or LinkedIn if you check it out.
-
-Until next time,
-
-**\- D**
 
 ## Storybook and Next.js
-# How Storybook supercharged our migration to Next.js
 
-482 views \|November 12, 2024 \|4 min read
+November 12, 2024
 
-Hey everyone! 👋
-
-At Native Teams, we’re always looking for ways to improve our development processes and deliver a better user experience. As being around for a while, I saw the need to evolve from our existing Laravel and Vue-based architecture to **Next.js**—a decision aimed at making our frontend more scalable, maintainable, and modern. Alongside this migration, implementing **Storybook** became a key step in streamlining how we worked with components, collaborated with design, and maintained consistency throughout the process.
-
-This post is a look into why I made this decision, how Storybook helped us achieve our goals, and the impact it’s had on our workflow and product quality.
+How Storybook supercharged the migration from Laravel and Vue to Next.js at Native Teams. Component-driven development, improved design collaboration, streamlined QA, and maintaining a high-quality design system.
 
 * * *
 
-## Why Storybook?
+## Boosting PageSpeed
 
-When we decided to migrate from Laravel and Vue to Next.js, the shift wasn’t just about adopting a new framework—it was about rethinking how we approach frontend development altogether. One of the challenges I wanted to address was ensuring our components were easy to manage, test, and reuse across projects. That’s where Storybook came in.
+October 1, 2024
 
-Here’s how it made a difference:
-
-### 1\. **Component-Driven Development**
-
-Storybook allowed us to develop UI components in isolation, making building and testing faster and more reliable. This was critical for the migration because it meant we could work on components independently, even before the app was fully set up.
-
-- **Example**: While migrating our dashboard components, we could develop and test them in Storybook, ensuring each one was perfect before integration.
-
-![Storybook Component](https://www.dkountanis.xyz/_next/image?url=%2Fimages%2Famount-input.png&w=1920&q=75)
-
-### 2\. **Improved Collaboration with Design**
-
-With Storybook, we established a visual library of components that the design and development teams could review together. This eliminated confusion, reduced back-and-forths, and ensured that the final implementation matched the design team’s vision.
-
-> _“Storybook became a single source of truth for our components, making collaboration between design and development effortless.”_
-
-![Component Library](https://www.dkountanis.xyz/_next/image?url=%2Fimages%2Fcombobox-dark-mode.png&w=1920&q=75)
+How Native Teams improved PageSpeed scores from 40s to 90+ on desktop and 82 on mobile. Deferred third-party scripts, fixed LCP, added CDN, lazy loading, and leveraged Next.js dynamic imports.
 
 * * *
 
-## How It Streamlined Our QA Process
+## Consulting & Technical Advisory
 
-One of the unexpected benefits of Storybook was its impact on our QA workflow. Testing visual components can be time-consuming, but with Storybook, we were able to catch issues early, reducing the time spent on integration testing.
+Proven track record of shipping impactful products: built and scaled products from 1 to 20k+ users, led technical teams at venture-backed startups from seed to Series B, shipped dozens of successful MVPs and product launches.
 
-### Key Improvements:
+Services: AI Integration & Prototyping, MVPs & Product Launches. Works with early-stage startups, product teams, and solo founders.
 
-- **Reduced QA Time**: By isolating components, our QA team could validate them individually, leading to quicker feedback loops.
-- **Higher Confidence in Releases**: Knowing that each component was thoroughly tested gave us confidence during deployment, even as we transitioned to a new framework.
+Flexible: one-off consulting, weekly retainers, or full builds. Remote-first, async-friendly.
 
-* * *
-
-## Maintaining a High-Quality Design System
-
-Another major focus for me during this migration was ensuring that our **design system** remained robust and consistent. With Storybook, we had a tool to document and maintain our components in real time.
-
-### Highlights:
-
-1. **Consistent Implementation**: Every component followed the same design principles, ensuring a cohesive user experience across the app.
-2. **Accessible Documentation**: The built-in documentation features allowed our team, from developers to QA, to understand how each component worked and how to use it effectively.
-
-![Component Library](https://www.dkountanis.xyz/_next/image?url=%2Fimages%2Fform-elements.png&w=640&q=75)
-
-* * *
-
-## Business Impact of Storybook Integration
-
-The results of this approach weren’t just technical—they had a direct impact on our team’s efficiency and the product’s overall quality.
-
-- **Faster Time to Market**: Isolated component development and streamlined QA meant we could roll out features more quickly.
-- **Better User Experience**: With polished components and fewer bugs, users now enjoy a smoother, more cohesive experience.
-
-> Before implementing Storybook, developing and testing new features often took 3-5 days, as components had to be tested and debugged in the full application context. After integrating Storybook, this timeline was reduced to 1-2 days, thanks to isolated component development and faster feedback loops during QA.
-
-A recent feature that involved building a new feature yet to be released ( **✨Native Passport✨**) was completed in 2 days instead of 5, with significantly fewer iterations during QA.
-
-## What’s Next for Our Tech Stack?
-
-This migration to Next.js is just the beginning. Storybook has become a central part of how we develop at Native Teams, and it’s already proven invaluable in helping us maintain high standards as we scale.
-
-In the coming months, we plan to:
-
-- Expand our component library for faster development on future projects.
-- Leverage automation tools to further improve our QA and testing processes.
-
-Thanks for reading!
-
-I’m excited to share this journey and would love to hear about your experiences with tech stack migrations or using tools like Storybook. Let’s connect and chat—there’s always something new to learn! 🙌
-
-Until next time! ✌️
-
-## Page Not Found
-# 404 - Page Not Found
-
-The page you are looking for does not exist.
-
+Contact: [LinkedIn](https://www.linkedin.com/in/dimitris-kountanis/) | [Schedule a Discovery Call](https://cal.com/dkountanis-nteams/30min)

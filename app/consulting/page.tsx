@@ -10,53 +10,51 @@ export default function ConsultingPage() {
 
       <div className="prose dark:prose-invert">
         <div className="mb-8">
-          <p className="text-lg font-medium text-blue-600 dark:text-blue-400">
-            Proven track record of shipping impactful products:
-          </p>
-          <ul className="mt-2 space-y-2">
-            <li>Built and scaled products from 1 to 20k+ users</li>
-            <li>Led technical teams at venture-backed startups from seed to Series B</li>
-            <li>Shipped dozens of successful MVPs and product launches, hundreds of features</li>
-          </ul>
-        </div>
-
-        <div className="mb-8">
-          <p className="text-lg font-medium">
-            Need help shipping faster, scaling smarter, or integrating AI into your product?
+          <p>
+            I'm a VP of Product Engineering running a 15-person team at a Series B fintech. I joined
+            as the first front-end engineer before we had a product and built alongside the company
+            through every stage. Now I lead the full product engineering org and I've spent the last
+            year transitioning the entire team to AI-native workflows.
           </p>
           <p>
-            I work with growing teams and founders to solve high-leverage product and engineering
-            problems fast.
-          </p>
-          <p>
-            From building MVPs and AI features to fixing tech debt and scaling infra, I bring speed,
-            clarity, and execution.
+            I take on consulting work because I like hard problems and I'm good at solving them fast.
+            If you need someone who ships, not someone who advises from the sidelines, we should
+            talk.
           </p>
         </div>
 
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">What I Do</h2>
+          <h2 className="text-2xl font-bold mb-4">What I help with</h2>
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold">AI Integration & Prototyping</h3>
+              <h3 className="font-semibold">AI-native engineering adoption</h3>
               <p>
-                Bring LLMs, embeddings, and automation into your product.
-                <br />
-                <span className="text-sm">
-                  (I've shipped dozens of AI features across products.)
-                </span>
+                Your team is "exploring AI tools" but nothing has actually changed. I help
+                engineering teams make the real transition: agentic workflows, AI-assisted code
+                review, prompt-driven development, and the mindset shifts that make it stick. Not a
+                workshop. An actual transformation of how your team ships software.
               </p>
             </div>
 
             <div>
-              <h3 className="font-semibold">MVPs & Product Launches</h3>
+              <h3 className="font-semibold">Product engineering & MVPs</h3>
               <p>
-                Rapidly build and ship high-quality MVPs with modern stacks.
-                <br />
-                <span className="text-sm">(Web apps, SaaS, internal tools, you name it.)</span>
+                From idea to live product, fast. Web apps, SaaS, mobile, internal tools. I build
+                with modern stacks (Next.js, Supabase, React Native) and ship at a speed most teams
+                don't think is possible. If you need an MVP in weeks, not months, this is what I do.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">Scaling teams & architecture</h3>
+              <p>
+                Growing from 3 engineers to 15+. Monorepo setups, design systems, tech stack
+                migrations, frontend architecture that doesn't fall apart at scale. I've done this at
+                Native Teams (Vue to React, legacy monolith to modern monorepo) and I can help you
+                skip the mistakes I already made.
               </p>
             </div>
           </div>
@@ -65,23 +63,31 @@ export default function ConsultingPage() {
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Who I Work With</h2>
-          <ul className="list-disc pl-6">
-            <li>Early-stage startups who need a hands-on CTO-type to get things moving.</li>
-            <li>Product teams looking to integrate AI or ship features faster.</li>
-            <li>Solo founders who want a tech partner without the long-term hire.</li>
+          <h2 className="text-2xl font-bold mb-4">Why me</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>First engineer at a company that went from zero to Series B</li>
+            <li>Grew and led a team from solo to 15+ engineers</li>
+            <li>Shipped products used by 20,000+ users</li>
+            <li>Led a full tech stack migration (Vue to React, monorepo)</li>
+            <li>Transitioned an entire engineering org to AI-native workflows</li>
+            <li>
+              Building and shipping AI agent products on the side to stay on the bleeding edge
+            </li>
           </ul>
+          <p className="mt-4">
+            I'm not a consultant who reads about this stuff. I do it every day.
+          </p>
         </div>
 
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
-          <ul className="list-disc pl-6">
-            <li>Flexible: One-off consulting, weekly retainers, or full builds.</li>
-            <li>Remote-first, async-friendly. No meetings unless we need them.</li>
-            <li>Direct, no-fluff communication and fast delivery.</li>
-          </ul>
+          <h2 className="text-2xl font-bold mb-4">How it works</h2>
+          <p>
+            Flexible engagement. One-off consulting sessions, weekly retainers, or full product
+            builds. Remote-first, async-friendly. No unnecessary meetings. Direct communication and
+            fast delivery.
+          </p>
         </div>
 
         <hr className="my-8" />
@@ -98,8 +104,8 @@ export default function ConsultingPage() {
             >
               LinkedIn
             </Link>{" "}
+            or book a call below. You'll get honest feedback, fast execution, and real results.
           </p>
-          <p>You'll get honest feedback, fast execution, and real results.</p>
 
           <div className="mt-8">
             <Button variant="default" asChild>

@@ -1,7 +1,7 @@
 import "@/app/global.css"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
 import type { Metadata } from "next"
 import Footer from "@/components/footer"
 import { Navbar } from "@/components/nav"
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     default: "Dimitris Kountanis",
     template: "%s | Dimitris Kountanis",
   },
-  description: "Founding Engineer at Native Teams, Front-End Developer, and Fintech Enthusiast.",
+  description: "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products.",
   openGraph: {
-    title: "Dimitris Kountanis | Head of Front-End at Native Teams",
+    title: "Dimitris Kountanis | VP of Product Engineering at Native Teams",
     description:
-      "Explore the portfolio of Dimitris Kountanis, a founding engineer at Native Teams, front-end developer, and fintech enthusiast. Discover insights on engineering management, software development, and industry trends.",
+      "Dimitris Kountanis — VP of Product Engineering at Native Teams. Writing about AI-native engineering, product development, fintech, and the future of software teams.",
     url: "https://dkountanis.xyz",
     siteName: "Dimitris Kountanis Portfolio",
     locale: "en_US",
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={GeistMono.variable} suppressHydrationWarning>
+    <html lang="en" className={GeistSans.variable} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="antialiased font-mono">
+      <body className="antialiased font-sans">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
