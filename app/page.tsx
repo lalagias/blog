@@ -1,21 +1,13 @@
-import Image from "next/image"
 import Link from "next/link"
 import { BlogPosts } from "@/components/posts"
-import NTLogo from "@/public/assets/icons/logo-monogram.png"
-import DimitrisPortrait from "@/public/dimitris-photo.jpg"
+import { DitheredPortrait } from "@/components/dithered-portrait"
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">Hey, I'm Dimitris 🏄🏼</h1>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">hey, I'm Dimitris </h1>
 
-      <Image
-        src={DimitrisPortrait}
-        alt="Dimitris"
-        width="300"
-        height="300"
-        className="rounded-md w-48 h-48 object-cover object-top mb-4"
-      />
+      <DitheredPortrait />
       <p className="mb-4">
         {`VP of Product Engineering at`}{" "}
         <Link
