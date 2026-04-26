@@ -1,5 +1,15 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+
+export const metadata: Metadata = {
+  title: "Consulting & Technical Advisory",
+  description:
+    "Consulting for AI-native engineering adoption, product engineering, MVPs, scaling teams, and frontend architecture.",
+  alternates: {
+    canonical: "/consulting",
+  },
+}
 
 export default function ConsultingPage() {
   return (
@@ -17,9 +27,9 @@ export default function ConsultingPage() {
             year transitioning the entire team to AI-native workflows.
           </p>
           <p>
-            I take on consulting work because I like hard problems and I'm good at solving them fast.
-            If you need someone who ships, not someone who advises from the sidelines, we should
-            talk.
+            I take on consulting work because I like hard problems and I'm good at solving them
+            fast. If you need someone who ships, not someone who advises from the sidelines, we
+            should talk.
           </p>
         </div>
 
@@ -52,9 +62,9 @@ export default function ConsultingPage() {
               <h3 className="font-semibold">Scaling teams & architecture</h3>
               <p>
                 Growing from 3 engineers to 15+. Monorepo setups, design systems, tech stack
-                migrations, frontend architecture that doesn't fall apart at scale. I've done this at
-                Native Teams (Vue to React, legacy monolith to modern monorepo) and I can help you
-                skip the mistakes I already made.
+                migrations, frontend architecture that doesn't fall apart at scale. I've done this
+                at Native Teams (Vue to React, legacy monolith to modern monorepo) and I can help
+                you skip the mistakes I already made.
               </p>
             </div>
           </div>

@@ -2,7 +2,11 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "A summary of my work and contributions.",
+  description:
+    "A summary of Dimitris Kountanis' work leading product engineering, fintech platforms, and AI-native teams.",
+  alternates: {
+    canonical: "/work",
+  },
 }
 
 export default function WorkPage() {
@@ -57,7 +61,8 @@ export default function WorkPage() {
             thinking with engineering execution. Helped the team pivot to the new age of software
             development: vibe-coded solutions shipping at 10x speed, delivering mobile apps at a
             pace we never thought possible, and driving a full transition to AI-native teams. The
-            overlap between product and engineering is where the magic happens now, and we're all in.
+            overlap between product and engineering is where the magic happens now, and we're all
+            in.
           </li>
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />

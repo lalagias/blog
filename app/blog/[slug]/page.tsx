@@ -1,8 +1,10 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { calculateReadingTime, formatDate, getBlogPosts } from "@/app/blog/utils"
 import { CustomMDX } from "@/components/mdx"
 import { ReportView } from "@/components/viewcount"
 import { safeRedis } from "@/lib/redis"
+import { absoluteUrl, siteName } from "@/lib/site"
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()
@@ -12,7 +14,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata | undefined> {
   const params = await props.params
   const post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
@@ -21,19 +25,22 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
   const { title, publishedAt: publishedTime, summary: description, image } = post.metadata
 
-  const ogImage = image
-    ? `https://dkountanis.xyz${image}`
-    : `https://dkountanis.xyz/og?title=${title}`
+  const canonicalUrl = absoluteUrl(`/blog/${post.slug}`)
+  const ogImage = image ? absoluteUrl(image) : absoluteUrl(`/og?title=${encodeURIComponent(title)}`)
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
       type: "article",
       publishedTime,
-      url: `https://dkountanis.xyz/blog/${post.slug}`,
+      url: canonicalUrl,
+      siteName,
       images: [
         {
           url: ogImage,
@@ -58,6 +65,10 @@ export default async function Blog(props: { params: Promise<{ slug: string }> })
   }
 
   const views = (await safeRedis.get<number>(["pageviews", "example", post.slug].join(":"))) ?? 0
+  const canonicalUrl = absoluteUrl(`/blog/${post.slug}`)
+  const imageUrl = post.metadata.image
+    ? absoluteUrl(post.metadata.image)
+    : absoluteUrl(`/og?title=${encodeURIComponent(post.metadata.title)}`)
 
   return (
     <section className="pb-20">
@@ -72,13 +83,17 @@ export default async function Blog(props: { params: Promise<{ slug: string }> })
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `https://dkountanis.xyz${post.metadata.image}`
-              : `https://dkountanis.xyz/og?title=${post.metadata.title}`,
-            url: `https://dkountanis.xyz/blog/${post.slug}`,
+            image: imageUrl,
+            url: canonicalUrl,
             author: {
-              "@type": "Dimitris Kountanis",
-              name: "My Portfolio",
+              "@type": "Person",
+              name: siteName,
+              url: absoluteUrl("/"),
+            },
+            publisher: {
+              "@type": "Person",
+              name: siteName,
+              url: absoluteUrl("/"),
             },
           }),
         }}

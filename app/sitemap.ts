@@ -1,10 +1,9 @@
 import { getBlogPosts } from "@/app/blog/utils"
-
-export const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dkountanis.xyz"
+import { absoluteUrl } from "@/lib/site"
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: absoluteUrl(`/blog/${post.slug}`),
     lastModified: new Date(post.metadata.publishedAt).toISOString(),
     changeFrequency: "monthly",
     priority: 0.7,
@@ -12,7 +11,7 @@ export default async function sitemap() {
 
   // Base routes
   const routes = ["", "/blog", "/work", "/consulting", "/build-in-public"].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: absoluteUrl(route || "/"),
     lastModified: new Date().toISOString(),
     changeFrequency: "monthly",
     priority: route === "" ? 1.0 : 0.9,

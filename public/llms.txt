@@ -1,13 +1,13 @@
 # https://dkountanis.xyz llms.txt
 
-- [Dimitris Kountanis](https://www.dkountanis.xyz/): VP of Product Engineering at Native Teams. Building the future of work and utilizing AI to the maximum of its abilities. A curated corner of his mind on product, engineering, and AI.
-- [Blog](https://www.dkountanis.xyz/blog): Thoughts on agentic engineering, AI-native teams, product development, and building in public.
-- [Work](https://www.dkountanis.xyz/work): From front-end engineer to VP of Product Engineering at Native Teams. AI-native leadership, agentic engineering, and scaling teams.
-- [Consulting & Technical Advisory](https://www.dkountanis.xyz/consulting): Consulting services for startups - AI integration, MVPs, and scaling engineering teams.
-- [Build in Public](https://www.dkountanis.xyz/build-in-public): Side projects and experiments. Avrae (AI visibility monitoring, ongoing), HeyThatAd and WhoIsAt (abandoned).
-- [I Haven't Written Code in a Year](https://www.dkountanis.xyz/blog/agentic-engineering): On agentic engineering, trusting the models, and why the gap between early adopters and laggards is about to become irreversible.
-- [WhoIsAt](https://www.dkountanis.xyz/blog/building-whoisat): Built a tool to enrich event guest lists with AI agents. It worked. Then killed it. Lessons learned.
-- [Trunk-Based Development](https://www.dkountanis.xyz/blog/trunk-based-development-bet): Moving away from release cycles to trunk-based development for faster, safer delivery.
-- [HeyThatAd Launch](https://www.dkountanis.xyz/blog/heythatad-launch): Vibe-coded a creative ad generator in a weekend with Cursor, Supabase, and Next.js.
-- [Storybook and Next.js](https://www.dkountanis.xyz/blog/storybook-implementation): How Storybook supercharged the migration to Next.js at Native Teams.
-- [Boosting PageSpeed](https://www.dkountanis.xyz/blog/boost-pagespeed): How Native Teams improved PageSpeed scores from 40s to 90+.
+- [Dimitris Kountanis](https://dkountanis.xyz/): VP of Product Engineering at Native Teams. Building the future of work and utilizing AI to the maximum of its abilities. A curated corner of his mind on product, engineering, and AI.
+- [Blog](https://dkountanis.xyz/blog): Thoughts on agentic engineering, AI-native teams, product development, and building in public.
+- [Work](https://dkountanis.xyz/work): From front-end engineer to VP of Product Engineering at Native Teams. AI-native leadership, agentic engineering, and scaling teams.
+- [Consulting & Technical Advisory](https://dkountanis.xyz/consulting): Consulting services for startups - AI integration, MVPs, and scaling engineering teams.
+- [Build in Public](https://dkountanis.xyz/build-in-public): Side projects and experiments. Avrae (AI visibility monitoring, ongoing), HeyThatAd and WhoIsAt (abandoned).
+- [I Haven't Written Code in a Year](https://dkountanis.xyz/blog/agentic-engineering): On agentic engineering, trusting the models, and why the gap between early adopters and laggards is about to become irreversible.
+- [WhoIsAt](https://dkountanis.xyz/blog/building-whoisat): Built a tool to enrich event guest lists with AI agents. It worked. Then killed it. Lessons learned.
+- [Trunk-Based Development](https://dkountanis.xyz/blog/trunk-based-development-bet): Moving away from release cycles to trunk-based development for faster, safer delivery.
+- [HeyThatAd Launch](https://dkountanis.xyz/blog/heythatad-launch): Vibe-coded a creative ad generator in a weekend with Cursor, Supabase, and Next.js.
+- [Storybook and Next.js](https://dkountanis.xyz/blog/storybook-implementation): How Storybook supercharged the migration to Next.js at Native Teams.
+- [Boosting PageSpeed](https://dkountanis.xyz/blog/boost-pagespeed): How Native Teams improved PageSpeed scores from 40s to 90+.

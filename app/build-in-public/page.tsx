@@ -1,9 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Build in Public",
-  description: "Read my thoughts on software, business, product, growth and more.",
+  description: "Side projects, experiments, and build-in-public notes from Dimitris Kountanis.",
+  alternates: {
+    canonical: "/build-in-public",
+  },
 }
 
 export default async function Page() {

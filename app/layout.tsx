@@ -6,19 +6,24 @@ import type { Metadata } from "next"
 import Footer from "@/components/footer"
 import { Navbar } from "@/components/nav"
 import { ThemeProvider } from "@/components/theme-provider"
+import { absoluteUrl, siteName, siteUrl } from "@/lib/site"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dkountanis.xyz"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Dimitris Kountanis",
-    template: "%s | Dimitris Kountanis",
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description: "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products.",
+  description:
+    "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Dimitris Kountanis | VP of Product Engineering at Native Teams",
     description:
       "Dimitris Kountanis — VP of Product Engineering at Native Teams. Writing about AI-native engineering, product development, fintech, and the future of software teams.",
-    url: "https://dkountanis.xyz",
+    url: absoluteUrl("/"),
     siteName: "Dimitris Kountanis Portfolio",
     locale: "en_US",
     type: "website",
@@ -44,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={GeistSans.variable} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/assets/icons/logo-monogram.svg" type="image/svg+xml" />
       </head>
       <body className="antialiased font-sans">
         <ThemeProvider
