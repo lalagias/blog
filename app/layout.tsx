@@ -48,9 +48,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={GeistSans.variable} suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/assets/icons/logo-monogram.svg" type="image/svg+xml" />
-      </head>
       <body className="antialiased font-sans">
         <ThemeProvider
           attribute="class"
