@@ -1,11 +1,38 @@
 import type { Metadata } from "next"
+import { absoluteUrl, ogImageUrl, siteName } from "@/lib/site"
+
+const title = "Work"
+const description =
+  "A summary of Dimitris Kountanis' work leading product engineering, fintech platforms, and AI-native teams."
+const canonicalUrl = absoluteUrl("/work")
+const image = ogImageUrl(title)
 
 export const metadata: Metadata = {
-  title: "Work",
-  description:
-    "A summary of Dimitris Kountanis' work leading product engineering, fintech platforms, and AI-native teams.",
+  title,
+  description,
   alternates: {
-    canonical: "/work",
+    canonical: canonicalUrl,
+  },
+  openGraph: {
+    title,
+    description,
+    url: canonicalUrl,
+    siteName,
+    type: "website",
+    images: [
+      {
+        url: image,
+        width: 1920,
+        height: 1080,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
   },
 }
 

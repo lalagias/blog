@@ -5,3 +5,7 @@ export const siteName = "Dimitris Kountanis"
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString()
 }
+
+export function ogImageUrl(title = siteName) {
+  return absoluteUrl(`/og?title=${encodeURIComponent(title)}`)
+}

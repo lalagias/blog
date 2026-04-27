@@ -1,13 +1,40 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { absoluteUrl, ogImageUrl, siteName } from "@/lib/site"
+
+const title = "Consulting & Technical Advisory"
+const description =
+  "Consulting for AI-native engineering adoption, product engineering, MVPs, scaling teams, and frontend architecture."
+const canonicalUrl = absoluteUrl("/consulting")
+const image = ogImageUrl(title)
 
 export const metadata: Metadata = {
-  title: "Consulting & Technical Advisory",
-  description:
-    "Consulting for AI-native engineering adoption, product engineering, MVPs, scaling teams, and frontend architecture.",
+  title,
+  description,
   alternates: {
-    canonical: "/consulting",
+    canonical: canonicalUrl,
+  },
+  openGraph: {
+    title,
+    description,
+    url: canonicalUrl,
+    siteName,
+    type: "website",
+    images: [
+      {
+        url: image,
+        width: 1920,
+        height: 1080,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
   },
 }
 

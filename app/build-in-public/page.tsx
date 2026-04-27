@@ -1,12 +1,39 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
+import { absoluteUrl, ogImageUrl, siteName } from "@/lib/site"
+
+const title = "Build in Public"
+const description = "Side projects, experiments, and build-in-public notes from Dimitris Kountanis."
+const canonicalUrl = absoluteUrl("/build-in-public")
+const image = ogImageUrl(title)
 
 export const metadata: Metadata = {
-  title: "Build in Public",
-  description: "Side projects, experiments, and build-in-public notes from Dimitris Kountanis.",
+  title,
+  description,
   alternates: {
-    canonical: "/build-in-public",
+    canonical: canonicalUrl,
+  },
+  openGraph: {
+    title,
+    description,
+    url: canonicalUrl,
+    siteName,
+    type: "website",
+    images: [
+      {
+        url: image,
+        width: 1920,
+        height: 1080,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
   },
 }
 

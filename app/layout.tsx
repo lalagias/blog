@@ -6,7 +6,12 @@ import type { Metadata } from "next"
 import Footer from "@/components/footer"
 import { Navbar } from "@/components/nav"
 import { ThemeProvider } from "@/components/theme-provider"
-import { absoluteUrl, siteName, siteUrl } from "@/lib/site"
+import { absoluteUrl, ogImageUrl, siteName, siteUrl } from "@/lib/site"
+
+const defaultDescription =
+  "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products."
+const defaultOgTitle = "Dimitris Kountanis | VP of Product Engineering at Native Teams"
+const defaultOgImage = ogImageUrl("Dimitris Kountanis")
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -14,19 +19,26 @@ export const metadata: Metadata = {
     default: siteName,
     template: `%s | ${siteName}`,
   },
-  description:
-    "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products.",
+  description: defaultDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Dimitris Kountanis | VP of Product Engineering at Native Teams",
+    title: defaultOgTitle,
     description:
       "Dimitris Kountanis — VP of Product Engineering at Native Teams. Writing about AI-native engineering, product development, fintech, and the future of software teams.",
     url: absoluteUrl("/"),
     siteName: "Dimitris Kountanis Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: defaultOgImage,
+        width: 1920,
+        height: 1080,
+        alt: defaultOgTitle,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -40,8 +52,10 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Dimitris Kountanis",
     card: "summary_large_image",
+    title: defaultOgTitle,
+    description: defaultDescription,
+    images: [defaultOgImage],
   },
 }
 

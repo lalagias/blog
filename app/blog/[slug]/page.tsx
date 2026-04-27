@@ -4,7 +4,7 @@ import { calculateReadingTime, formatDate, getBlogPosts } from "@/app/blog/utils
 import { CustomMDX } from "@/components/mdx"
 import { ReportView } from "@/components/viewcount"
 import { safeRedis } from "@/lib/redis"
-import { absoluteUrl, siteName } from "@/lib/site"
+import { absoluteUrl, ogImageUrl, siteName } from "@/lib/site"
 
 export async function generateStaticParams() {
   const posts = getBlogPosts()
@@ -26,7 +26,7 @@ export async function generateMetadata(props: {
   const { title, publishedAt: publishedTime, summary: description, image } = post.metadata
 
   const canonicalUrl = absoluteUrl(`/blog/${post.slug}`)
-  const ogImage = image ? absoluteUrl(image) : absoluteUrl(`/og?title=${encodeURIComponent(title)}`)
+  const ogImage = image ? absoluteUrl(image) : ogImageUrl(title)
 
   return {
     title,
@@ -44,6 +44,9 @@ export async function generateMetadata(props: {
       images: [
         {
           url: ogImage,
+          width: 1920,
+          height: 1080,
+          alt: title,
         },
       ],
     },
@@ -68,7 +71,7 @@ export default async function Blog(props: { params: Promise<{ slug: string }> })
   const canonicalUrl = absoluteUrl(`/blog/${post.slug}`)
   const imageUrl = post.metadata.image
     ? absoluteUrl(post.metadata.image)
-    : absoluteUrl(`/og?title=${encodeURIComponent(post.metadata.title)}`)
+    : ogImageUrl(post.metadata.title)
 
   return (
     <section className="pb-20">
