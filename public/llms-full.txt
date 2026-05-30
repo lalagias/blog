@@ -26,13 +26,14 @@ Embracing risk and growth, I relocated to Lisbon as a junior engineer during the
 
 * * *
 
-## Build in Public
+## Projects
 
 Side projects and experiments:
 
-- **Avrae** (avrae.ai) - AI Visibility Monitoring. On going.
-- **HeyThatAd** (heythatad.com) - Creative ad generator. Abandoned.
-- **WhoIsAt** (whoisat.app) - Event guest list enrichment with AI agents. Abandoned.
+- **Avrae** (avrae.ai) - AI Visibility Monitoring. Ongoing.
+- **Agentplex** (agentplex.sh) - Ongoing.
+- **HeyThatAd** (heythatad.com) - Creative ad generator. Abandoned 2025.
+- **WhoIsAt** (whoisat.app) - Event guest list enrichment with AI agents. Abandoned 2026.
 
 * * *
 

@@ -14,8 +14,8 @@ const navItems = {
   "/blog": {
     name: "blog",
   },
-  "/build-in-public": {
-    name: "build in public",
+  "/projects": {
+    name: "projects",
   },
   "/consulting": {
     name: "consulting",

@@ -67,7 +67,7 @@ export default function ConsultingPage() {
 
           <div className="space-y-6">
             <div>
-              <h3 className="font-semibold">AI-native engineering adoption</h3>
+              <h3 className="font-semibold">ai-native engineering adoption</h3>
               <p>
                 Your team is "exploring AI tools" but nothing has actually changed. I help
                 engineering teams make the real transition: agentic workflows, AI-assisted code
@@ -77,7 +77,7 @@ export default function ConsultingPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold">Product engineering & MVPs</h3>
+              <h3 className="font-semibold">product engineering & mvps</h3>
               <p>
                 From idea to live product, fast. Web apps, SaaS, mobile, internal tools. I build
                 with modern stacks (Next.js, Supabase, React Native) and ship at a speed most teams
@@ -86,7 +86,7 @@ export default function ConsultingPage() {
             </div>
 
             <div>
-              <h3 className="font-semibold">Scaling teams & architecture</h3>
+              <h3 className="font-semibold">scaling teams & architecture</h3>
               <p>
                 Growing from 3 engineers to 15+. Monorepo setups, design systems, tech stack
                 migrations, frontend architecture that doesn't fall apart at scale. I've done this
@@ -150,7 +150,7 @@ export default function ConsultingPage() {
                 href="https://cal.com/dkountanis-nteams/30min"
                 style={{ textDecoration: "none" }}
               >
-                Schedule a Discovery Call
+                schedule a discovery call
               </Link>
             </Button>
           </div>

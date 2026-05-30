@@ -4,7 +4,7 @@
 - [Blog](https://dkountanis.xyz/blog): Thoughts on agentic engineering, AI-native teams, product development, and building in public.
 - [Work](https://dkountanis.xyz/work): From front-end engineer to VP of Product Engineering at Native Teams. AI-native leadership, agentic engineering, and scaling teams.
 - [Consulting & Technical Advisory](https://dkountanis.xyz/consulting): Consulting services for startups - AI integration, MVPs, and scaling engineering teams.
-- [Build in Public](https://dkountanis.xyz/build-in-public): Side projects and experiments. Avrae (AI visibility monitoring, ongoing), HeyThatAd and WhoIsAt (abandoned).
+- [Projects](https://dkountanis.xyz/projects): Side projects and experiments. Avrae and Agentplex (ongoing), HeyThatAd (abandoned 2025) and WhoIsAt (abandoned 2026).
 - [I Haven't Written Code in a Year](https://dkountanis.xyz/blog/agentic-engineering): On agentic engineering, trusting the models, and why the gap between early adopters and laggards is about to become irreversible.
 - [WhoIsAt](https://dkountanis.xyz/blog/building-whoisat): Built a tool to enrich event guest lists with AI agents. It worked. Then killed it. Lessons learned.
 - [Trunk-Based Development](https://dkountanis.xyz/blog/trunk-based-development-bet): Moving away from release cycles to trunk-based development for faster, safer delivery.

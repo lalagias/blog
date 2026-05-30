@@ -10,7 +10,7 @@ export default async function sitemap() {
   }))
 
   // Base routes
-  const routes = ["", "/blog", "/work", "/consulting", "/build-in-public"].map((route) => ({
+  const routes = ["", "/blog", "/work", "/consulting", "/projects"].map((route) => ({
     url: absoluteUrl(route || "/"),
     lastModified: new Date().toISOString(),
     changeFrequency: "monthly",
