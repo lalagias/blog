@@ -20,6 +20,9 @@ const navItems = {
   "/consulting": {
     name: "consulting",
   },
+  "/tools": {
+    name: "tools",
+  },
 }
 
 function MenuIcon({ className }: { className?: string }) {
