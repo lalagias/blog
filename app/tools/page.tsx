@@ -39,6 +39,13 @@ type Tool = {
 
 const tools: Tool[] = [
   {
+    slug: "csv-viewer",
+    name: "CSV / Excel Viewer",
+    description:
+      "Drop CSV or Excel files and browse them in a fast spreadsheet view. Stays in your browser.",
+    tag: "viewer",
+  },
+  {
     slug: "md-to-pdf",
     name: "MD → PDF",
     description:
