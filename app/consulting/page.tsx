@@ -5,7 +5,7 @@ import { absoluteUrl, ogImageUrl, siteName } from "@/lib/site"
 
 const title = "Consulting & Technical Advisory"
 const description =
-  "Consulting for AI-native engineering adoption, product engineering, MVPs, scaling teams, and frontend architecture."
+  "CTO advisory for AI-native engineering adoption, product engineering, MVPs, scaling teams, and frontend architecture."
 const canonicalUrl = absoluteUrl("/consulting")
 const image = ogImageUrl(title)
 
@@ -48,10 +48,10 @@ export default function ConsultingPage() {
       <div className="prose dark:prose-invert">
         <div className="mb-8">
           <p>
-            I'm a VP of Product Engineering running a 15-person team at a Series B fintech. I joined
-            as the first front-end engineer before we had a product and built alongside the company
-            through every stage. Now I lead the full product engineering org and I've spent the last
-            year transitioning the entire team to AI-native workflows.
+            I lead technology and product engineering at a Series B fintech, after joining as the
+            first front-end engineer before we had a product. I've built alongside the company
+            through every stage: early product discovery, scaling the engineering team, rebuilding
+            the platform, and moving the org into AI-native workflows.
           </p>
           <p>
             I take on consulting work because I like hard problems and I'm good at solving them
@@ -88,10 +88,11 @@ export default function ConsultingPage() {
             <div>
               <h3 className="font-semibold">scaling teams & architecture</h3>
               <p>
-                Growing from 3 engineers to 15+. Monorepo setups, design systems, tech stack
-                migrations, frontend architecture that doesn't fall apart at scale. I've done this
-                at Native Teams (Vue to React, legacy monolith to modern monorepo) and I can help
-                you skip the mistakes I already made.
+                Growing from a small early team into a 40+ person technology department. Org
+                structure, delivery rituals, platform decisions, product-engineering alignment, and
+                the systems that keep teams shipping without slowing down. I can help you avoid the
+                expensive mistakes that show up when product, people, and architecture scale
+                together.
               </p>
             </div>
           </div>
@@ -103,9 +104,9 @@ export default function ConsultingPage() {
           <h2 className="text-2xl font-bold mb-4">why me</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>First engineer at a company that went from zero to Series B</li>
-            <li>Grew and led a team from solo to 15+ engineers</li>
+            <li>Lead a 40+ person technology department across product engineering and platform</li>
             <li>Shipped products used by 20,000+ users</li>
-            <li>Led a full tech stack migration (Vue to React, monorepo)</li>
+            <li>Scaled engineering from early product discovery to mature delivery operations</li>
             <li>Transitioned an entire engineering org to AI-native workflows</li>
             <li>
               Building and shipping AI agent products on the side to stay on the bleeding edge

@@ -9,8 +9,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { absoluteUrl, ogImageUrl, siteName, siteUrl } from "@/lib/site"
 
 const defaultDescription =
-  "VP of Product Engineering at Native Teams. Fintech, AI-native engineering, and building products."
-const defaultOgTitle = "Dimitris Kountanis | VP of Product Engineering at Native Teams"
+  "CTO at Native Teams. Fintech, AI-native engineering, and building products."
+const defaultOgTitle = "Dimitris Kountanis | CTO at Native Teams"
 const defaultOgImage = ogImageUrl("Dimitris Kountanis")
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: defaultOgTitle,
     description:
-      "Dimitris Kountanis — VP of Product Engineering at Native Teams. Writing about AI-native engineering, product development, fintech, and the future of software teams.",
+      "Dimitris Kountanis - CTO at Native Teams. Writing about AI-native engineering, product development, fintech, and the future of software teams.",
     url: absoluteUrl("/"),
     siteName: "Dimitris Kountanis Portfolio",
     locale: "en_US",
