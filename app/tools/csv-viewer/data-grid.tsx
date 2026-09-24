@@ -147,7 +147,7 @@ export function DataGrid({ sheet }: { sheet: SpreadsheetSheet }) {
           <p className="text-sm font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
             {sheet.name}
           </p>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
             {numberFormatter.format(sheet.rows.length)} rows x{" "}
             {numberFormatter.format(sheet.columns.length)} columns
             {visibleRows.length !== sheet.rows.length
@@ -174,7 +174,7 @@ export function DataGrid({ sheet }: { sheet: SpreadsheetSheet }) {
       >
         <div style={{ minWidth: totalGridWidth }}>
           <div
-            className="sticky top-0 z-30 grid border-b border-neutral-300 bg-neutral-100 text-xs font-medium text-neutral-600 shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+            className="sticky top-0 z-30 grid border-b border-neutral-300 bg-neutral-100 text-sm font-medium text-neutral-600 shadow-[0_1px_0_rgba(0,0,0,0.04)] dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
             style={{ gridTemplateColumns }}
           >
             <div className="sticky left-0 z-40 flex h-9 items-center justify-center border-r border-neutral-300 bg-neutral-100 text-neutral-400 dark:border-neutral-700 dark:bg-neutral-900">
@@ -192,7 +192,7 @@ export function DataGrid({ sheet }: { sheet: SpreadsheetSheet }) {
                   title={column}
                 >
                   <span className="truncate">{column}</span>
-                  <span className="shrink-0 text-[10px] uppercase tracking-wide text-neutral-400">
+                    <span className="shrink-0 text-sm uppercase tracking-wide text-neutral-400">
                     {activeSort ?? ""}
                   </span>
                   <span
@@ -231,7 +231,7 @@ export function DataGrid({ sheet }: { sheet: SpreadsheetSheet }) {
                     transform: `translateY(${virtualRow.start}px)`,
                   }}
                 >
-                  <div className="sticky left-0 z-20 flex items-center justify-center border-r border-neutral-200 bg-inherit text-xs text-neutral-400 dark:border-neutral-800">
+                  <div className="sticky left-0 z-20 flex items-center justify-center border-r border-neutral-200 bg-inherit text-sm text-neutral-400 dark:border-neutral-800">
                     {displayRowNumber}
                   </div>
                   {sheet.columns.map((_, columnIndex) => {

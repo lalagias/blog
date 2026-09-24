@@ -348,13 +348,13 @@ export default function MdToPdfPage() {
       <div className="mb-6">
         <Link
           href="/tools"
-          className="text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors mb-3 inline-flex items-center gap-1"
+          className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors mb-3 inline-flex items-center gap-1"
         >
           ← tools
         </Link>
         <div className="flex items-start justify-between gap-4">
           <div>
-            <h1 className="font-semibold text-2xl tracking-tighter">md → pdf</h1>
+            <h1 className="font-semibold text-sm tracking-tighter">md → pdf</h1>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
               Write markdown, download a real PDF. Runs in your browser — nothing is stored.
             </p>

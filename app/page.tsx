@@ -5,7 +5,7 @@ import { BlogPosts } from "@/components/posts"
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">hey, I'm Dimitris </h1>
+      <h1 className="mb-8 text-sm font-semibold tracking-tighter">hey, I'm Dimitris </h1>
 
       <DitheredPortrait />
       <p className="mb-4">

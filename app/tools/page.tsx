@@ -57,7 +57,7 @@ const tools: Tool[] = [
 export default function ToolsPage() {
   return (
     <section className="w-full">
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">tools</h1>
+      <h1 className="font-semibold text-sm mb-8 tracking-tighter">tools</h1>
       <p className="text-neutral-600 dark:text-neutral-400 mb-8">
         Small, useful tools. Everything runs in the browser — nothing is ever stored.
       </p>
@@ -70,7 +70,7 @@ export default function ToolsPage() {
           >
             <div className="flex items-center justify-between">
               <p className="font-semibold tracking-tight">{tool.name}</p>
-              <span className="text-xs text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-full">
+              <span className="text-sm text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 px-2 py-0.5 rounded-full">
                 {tool.tag}
               </span>
             </div>
