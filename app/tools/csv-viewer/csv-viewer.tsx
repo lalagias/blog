@@ -208,7 +208,7 @@ export function CsvViewer() {
       {dragDepth > 0 ? (
         <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-white/85 backdrop-blur-sm dark:bg-neutral-950/85">
           <div className="border border-dashed border-neutral-400 bg-white px-10 py-8 text-center shadow-xl dark:border-neutral-600 dark:bg-neutral-950">
-            <p className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+            <p className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
               Drop spreadsheets here
             </p>
             <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
@@ -223,11 +223,11 @@ export function CsvViewer() {
           <div>
             <Link
               href="/tools"
-              className="mb-3 inline-flex items-center gap-1 text-xs text-neutral-500 transition-colors hover:text-neutral-800 focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:outline-none dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-950"
+              className="mb-3 inline-flex items-center gap-1 text-sm text-neutral-500 transition-colors hover:text-neutral-800 focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:outline-none dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-950"
             >
               &larr; tools
             </Link>
-            <h1 className="text-balance text-2xl font-semibold tracking-tighter">
+            <h1 className="text-balance text-sm font-semibold tracking-tighter">
               CSV / Excel Viewer
             </h1>
             <p className="mt-1 max-w-2xl text-sm text-neutral-500 dark:text-neutral-400">
@@ -298,7 +298,7 @@ export function CsvViewer() {
                       title={`${document.name} - imported ${formatImportedAt(document.importedAt)}`}
                     >
                       <span className="truncate">{document.name}</span>
-                      <span className="shrink-0 text-[10px] uppercase text-neutral-400">
+                      <span className="shrink-0 text-sm uppercase text-neutral-400">
                         {document.format}
                       </span>
                     </button>
@@ -332,7 +332,7 @@ export function CsvViewer() {
                       [activeDocument.id]: index,
                     }))
                   }
-                  className={`shrink-0 px-3 py-1.5 text-xs font-medium transition-colors focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:outline-none dark:focus-visible:ring-neutral-600 ${
+                  className={`shrink-0 px-3 py-1.5 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:outline-none dark:focus-visible:ring-neutral-600 ${
                     activeSheetIndex === index
                       ? "bg-white text-neutral-900 shadow-sm dark:bg-neutral-950 dark:text-neutral-100"
                       : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
@@ -349,7 +349,7 @@ export function CsvViewer() {
           ) : (
             <div className="flex min-h-[560px] flex-1 items-center justify-center bg-white p-6 text-center dark:bg-neutral-950">
               <div className="max-w-md border border-dashed border-neutral-300 px-8 py-10 dark:border-neutral-700">
-                <p className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+                <p className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
                   Drop CSV or Excel files
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">

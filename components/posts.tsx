@@ -27,10 +27,10 @@ export function BlogPosts() {
             >
               <ReportView slug={post.slug || ""} />
               <div className="w-full flex md:align-center flex-col md:flex-row space-x-0 md:space-x-2">
-                <p className="text-xs text-neutral-900 dark:text-neutral-100">
+                <p className="text-sm text-neutral-900 dark:text-neutral-100">
                   {post.metadata.title}
                 </p>
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 ml-auto mt-2 md:mt-0">
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-auto mt-2 md:mt-0">
                   {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)} {" views"} |{" "}
                   {calculateReadingTime(post.content)} min read
                 </p>

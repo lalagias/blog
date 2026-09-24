@@ -102,7 +102,7 @@ export default async function Blog(props: { params: Promise<{ slug: string }> })
         }}
       />
       <ReportView slug={post.slug || ""} />
-      <h1 className="title font-semibold text-2xl tracking-tighter">{post.metadata.title}</h1>
+      <h1 className="title font-semibold text-sm tracking-tighter">{post.metadata.title}</h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           <span>

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function ConsultingPage() {
   return (
     <section className="w-full">
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">
+      <h1 className="font-semibold text-sm mb-8 tracking-tighter">
         consulting & technical advisory
       </h1>
 
@@ -63,7 +63,7 @@ export default function ConsultingPage() {
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">what I help with</h2>
+          <h2 className="text-sm font-bold mb-4">what I help with</h2>
 
           <div className="space-y-6">
             <div>
@@ -101,7 +101,7 @@ export default function ConsultingPage() {
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">why me</h2>
+          <h2 className="text-sm font-bold mb-4">why me</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>First engineer at a company that went from zero to Series B</li>
             <li>Lead a 40+ person technology department across product engineering and platform</li>
@@ -120,7 +120,7 @@ export default function ConsultingPage() {
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">how it works</h2>
+          <h2 className="text-sm font-bold mb-4">how it works</h2>
           <p>
             Flexible engagement. One-off consulting sessions, weekly retainers, or full product
             builds. Remote-first, async-friendly. No unnecessary meetings. Direct communication and
@@ -131,7 +131,7 @@ export default function ConsultingPage() {
         <hr className="my-8" />
 
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">let's talk.</h2>
+          <h2 className="text-sm font-bold mb-4">let's talk.</h2>
           <p>
             DM me on{" "}
             <Link

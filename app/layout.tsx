@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={GeistSans.variable} suppressHydrationWarning>
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans text-sm">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

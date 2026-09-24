@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <section className="w-full">
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">projects</h1>
+      <h1 className="font-semibold text-sm mb-8 tracking-tighter">projects</h1>
       <p className="text-neutral-600 dark:text-neutral-400 mb-8">
         Things I've built on the side. Some I'm still shipping, some I've walked away from.
       </p>
@@ -93,7 +93,7 @@ export default async function Page() {
             href={project.url}
             className="flex items-center mb-4 border rounded-md p-5 border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
           >
-            <p className="text-lg font-semibold">{project.name}</p>
+            <p className="text-sm font-semibold">{project.name}</p>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 ml-2">{project.domain}</p>
             <Badge
               variant={project.status === "ongoing" ? "success" : "destructive"}
