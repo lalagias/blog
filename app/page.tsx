@@ -17,9 +17,8 @@ export default function Page() {
           {/* <Image src={NTLogo} alt="Native Teams Logo" width="12" height="12" className="mr-1 w-4 h-4 object-contain" /> */}
           Native Teams
         </Link>
-        , building the future of work through an agentic engineering approach. I lead technology and
-        product engineering for the platform, pushing my team into the new era of AI-native software
-        development.
+        , building the future of work. I lead technology and product engineering for both B2B and
+        consumer products, rallying at the frontier of a new era of agentic engineers.
       </p>
 
       <p className="mb-4">
